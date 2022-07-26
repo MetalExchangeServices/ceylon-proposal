@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root{
+    /* fonts root */
+    --Roboto: 'Roboto', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+    --inter: 'Inter', sans-serif;
+    /* color root */
+    --dark-blue: #117182;
+    --light-blue: #42AFC2;
+    --red-tomato: #FF4C4C;
+    --light-grey: #F1F1F1;
+    --grey: #C0C7C8;
+    --white: #ffffff;
+    --black-blue: #455A5C;
+    --white-blue: #EAF4F7;
+    --black: #000000;
+    /* margin root */
+    --marinMobile: 0vw 2vw;
+    --marinTalet: 0vw 4vw;
+    --marinLaptop: 0vw 7vw;
+    --marinPc: 0vw 10vw;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    min-height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+    html{
+        font-size: 3.5vh !important;
+    }
+}
