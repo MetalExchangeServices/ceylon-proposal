@@ -1,12 +1,18 @@
 import style from '../../../styles/container/components-css/navbar.module.css';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faArrowDownWideShort, faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const [Language, setLanguage] = useState('English');
   const [LanguageField, setLanguageField] = useState('');
+  const [Navbar, setNavbar] = useState(style.navbar_on);
+
+  useEffect(() => {
+    window.addEventListener('scroll', navbar)
+  })
+
   const language_f = () => {
     if (LanguageField === '') {
       setLanguageField(style.language_on)
@@ -24,10 +30,20 @@ export default function Navbar() {
       document.getElementById('filter_box').style.left = 0;
     }
   }
+  const navbar = () => {
+    if (scrollY) {
+      setNavbar(style.navbar_off)
+      setLanguageField('')
+      document.getElementById('language').checked = false;
+    } else {
+      setNavbar(style.navbar_on)
+    }
+  }
+
 
   return (
     <>
-      <div className={style.navbar_body}>
+      <nav className={style.navbar_body} id={Navbar}>
         <div className={style.nav_icons} id={style.menu_lable}>
           <label htmlFor='menu'>
             <input className={style.menu} onChange={Filter_tab} type={'checkbox'} id='menu'></input>
@@ -57,7 +73,7 @@ export default function Navbar() {
             <input className={style.language} type={'checkbox'} onChange={language_f} id='language'></input>
             <FontAwesomeIcon className={style.language_icon} icon={faGlobe}></FontAwesomeIcon>
             <div className={style.languages_select} id={LanguageField}>
-              <div></div> 
+              <div></div>
               <span className={style.language_hadding}>{Language}</span>
               <span className={style.language_container}>
                 <p onClick={language}>English</p>
@@ -71,7 +87,7 @@ export default function Navbar() {
             <FontAwesomeIcon className={style.filter_icon} icon={faArrowDownWideShort}></FontAwesomeIcon>
           </label>
         </div>
-      </div>
+      </nav>
     </>
   )
 }

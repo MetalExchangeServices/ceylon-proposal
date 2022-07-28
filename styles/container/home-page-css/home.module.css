@@ -1,0 +1,17 @@
+.home_main{
+    width: 100%;
+    display: flex;
+    height: 200vh;
+}
+.porposals_section{
+    width: 75%;
+    height: 100%;
+}
+.advertisement_section{
+    width: 25%;
+    height: 100%;
+}
+.page_moving{
+    width: 100%;
+    height: 5vh;
+}

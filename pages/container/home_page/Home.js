@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../../../styles/container/home-page-css/home.module.css'
 import Navbar from '../components/Navbar'
 import Filter from '../components/Filter'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -16,7 +17,16 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Filter/>
+      <main className={styles.home_main}>
+        <div className={styles.porposals_section}>
 
+        </div>
+        <div className={styles.advertisement_section}>
+
+        </div>
+      </main>
+      <div className={styles.page_moving}></div>
+      <Footer/>
     </>
   )
 }

@@ -1,13 +1,17 @@
 .navbar_body {
+    position: fixed;
+    width: 100%;
     height: auto;
     background: var(--light-grey);
-    padding: var(--marinPc);
+    padding: var(--margin);
     display: flex;
+    z-index: 1;
     align-items: center;
     box-shadow: 0.3rem 0rem 0.13rem 0.3rem rgb(0 0 0 / 12%);
+    transition-duration: 0.5s;
 }
 
-.nav_logo {
+.nav_logo{
     height: 3rem;
     width: 7rem;
     margin: 0.5rem 0rem;
@@ -24,7 +28,12 @@
     justify-content: center;
     flex: 1;
 }
-
+#navbar_on{
+    top: 0rem;
+}
+#navbar_off{
+    top: -5rem;
+}
 .a_container p {
     font-size: 0.8rem;
     font-family: var(--poppins);
@@ -126,17 +135,7 @@
 }
 
 /* media query */
-@media screen and (max-width: 1200px) {
-    .navbar_body {
-        padding: var(--marinLaptop);
-    }
-}
-
 @media screen and (max-width: 900px) {
-    .navbar_body {
-        padding: var(--marinTalet);
-    }
-
     .a_container {
         display: none;
     }
@@ -164,10 +163,6 @@
     }
 }
 @media screen and (min-height: 1000px) {
-    .navbar_body {
-        padding: var(--marinTalet);
-    }
-
     .a_container {
         display: none;
     }
@@ -192,11 +187,5 @@
     .languages_select{
         right: 1rem;
         border-radius: 0.5rem;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .navbar_body {
-        padding: var(--marinMobile);
     }
 }

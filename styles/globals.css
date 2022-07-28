@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
 
-:root{
+:root {
     /* fonts root */
     --Roboto: 'Roboto', sans-serif;
     --poppins: 'Poppins', sans-serif;
@@ -16,23 +16,41 @@
     --white-blue: #EAF4F7;
     --black: #000000;
     /* margin root */
-    --marinMobile: 0vw 2vw;
-    --marinTalet: 0vw 4vw;
-    --marinLaptop: 0vw 7vw;
-    --marinPc: 0vw 10vw;
+    --margin: 0vw 10vw;
 }
-*{
+
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     min-height: 100%;
     width: 100%;
 }
 
 @media screen and (min-width: 900px) {
-    html{
+    html {
         font-size: 3.5vh !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --margin: 0vw 7vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --margin: 0vw 4vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --margin: 0vw 2vw;
     }
 }

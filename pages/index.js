@@ -24,6 +24,9 @@ export default function Index() {
         <meta name="developer" content="Aizazulah" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ceylon Proposals</title>
+        {/* git add . */}
+        {/* git commit -m "first commit"  */}
+        {/* git push -u origin main */}
         {/* vercel --prod */}
         {/* https://ceylon.vercel.app/ */}
       </Head>
