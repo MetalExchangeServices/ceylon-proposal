@@ -1,0 +1,149 @@
+.proposal {
+    width: 30%;
+    background: var(--light-grey);
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem 0rem rgb(0 0 0 / 15%);
+}
+
+.proposal figure {
+    width: 100%;
+    height: 8rem;
+    background-image: url(https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0rem 0rem 0.4rem 0rem hsl(0deg 0% 0% / 50%);
+}
+
+.img_top {
+    background: rgb(0 0 0 / 25%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.img_top p {
+    flex: 1;
+    text-align: center;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-family: var(--poppins);
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+}
+
+.img_top svg {
+    font-size: 1rem;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.verify {
+    color: var(--light-blue);
+    background: white;
+}
+
+.report {
+    color: var(--red-tomato);
+    border: 0.1rem solid var(--red-tomato);
+    width: 0.6rem;
+    height: 0.6rem;
+    font-size: 0.6rem;
+    padding: 0.1rem;
+}
+
+.image_changer {
+    height: 1.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_changer span {
+    height: 0.3rem;
+    width: 0.3rem;
+    background: var(--grey);
+    border-radius: 0.5rem;
+    margin: 0% 1.5%;
+    cursor: pointer;
+}
+
+.basic_info {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basic_info span {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.basic_info p{
+    color: var(--grey);
+    font-family: var(--inter);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+}
+.basic_info h3{
+    color: var(--dark-blue);
+    font-family: var(--poppins);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.proposal aside{
+    color: var(--grey);
+    font-size: 0.6rem;
+    font-weight: 400;
+    font-family: var(--poppins);
+    padding: 0rem 0.5rem;
+    line-height: 0.8rem;
+    height: 4rem;
+    overflow: hidden;
+}
+.button{
+    padding: 0.5rem;
+    width: 100%;
+}
+.button button{
+    background: var(--light-blue);
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+    font-family: var(--inter);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+    cursor: pointer;
+}
+
+/* effects */
+.button button:hover{
+    background: var(--dark-blue);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+    .proposal{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .proposal{
+        width: 80%;
+    }
+}

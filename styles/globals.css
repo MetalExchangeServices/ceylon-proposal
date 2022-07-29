@@ -16,7 +16,7 @@
     --white-blue: #EAF4F7;
     --black: #000000;
     /* margin root */
-    --margin: 0vw 10vw;
+    --margin: 0vw 8vw;
 }
 
 * {
@@ -39,7 +39,7 @@ body {
 
 @media screen and (max-width: 1200px) {
     :root {
-        --margin: 0vw 7vw;
+        --margin: 0vw 6vw;
     }
 }
 

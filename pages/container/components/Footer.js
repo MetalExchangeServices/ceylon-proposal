@@ -11,7 +11,7 @@ export default function Footer() {
       <div className={style.footer_main}>
         <div className={style.logo_searchs}>
           <figure></figure>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s</p>
           <div>
           <span><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon><input placeholder='Enter Email' className={style.email}/></span>
           <span><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon><input placeholder='Search User' className={style.user}/></span>

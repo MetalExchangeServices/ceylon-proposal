@@ -5,6 +5,7 @@
     padding: var(--margin);
     padding-top: 4rem;
     padding-bottom: 0.5rem;
+    box-shadow: -0.3rem 0rem 0.13rem 0.3rem rgb(0 0 0 / 12%);
 }
 .footer_main{
     display: flex;
