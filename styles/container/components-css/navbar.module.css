@@ -162,7 +162,7 @@
         border-radius: 0.5rem;
     }
 }
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 1350px) {
     .a_container {
         display: none;
     }

@@ -199,7 +199,7 @@
     }
 
 }
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 1350px) {
     .filter_body {
         transition-duration: 0.5s;
         width: 100%;

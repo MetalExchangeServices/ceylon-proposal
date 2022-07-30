@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import styles from '../../../styles/container/profile-page-css/profile.module.css'
+import Navbar from '../components/Navbar'
+import Filter from '../components/Filter'
+import Footer from '../components/Footer'
+import Basic_Profile from './component/Basic_Profile'
 
 export default function Profile() {
   return (
@@ -12,7 +16,16 @@ export default function Profile() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ceylon Proposals | Profile</title>
       </Head>
-      <h1>Profile.js</h1>
+      <Navbar/>
+      <Filter/>
+      <main className={styles.profile}>
+        <div className={styles.basic_profile}>
+          <Basic_Profile/>
+        </div>
+        <div className={styles.detailed_profile}><p>123</p></div>
+        <div className={styles.adds_section}><p>123</p></div>
+      </main>
+      <Footer/>
     </>
   )
 }

@@ -1,5 +1,5 @@
 .proposal {
-    width: 30%;
+    width: 11rem;
     background: var(--light-grey);
     border-radius: 0.5rem;
     box-shadow: 0.3rem 0.3rem 0.5rem 0rem rgb(0 0 0 / 15%);
@@ -7,7 +7,7 @@
 
 .proposal figure {
     width: 100%;
-    height: 8rem;
+    height: 7rem;
     background-image: url(https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
     background-position: center center;
     background-repeat: no-repeat;
@@ -139,11 +139,25 @@
 
 @media screen and (max-width: 900px) {
     .proposal{
-        width: 45%;
+        width: 10rem
+    }
+    .proposal figure{
+        height: 7rem;
     }
 }
 @media screen and (max-width: 500px) {
     .proposal{
-        width: 80%;
+        width: 12rem;
+    }
+    .proposal figure{
+        height: 8rem;
+    }
+}
+@media screen and (min-height: 1350px) {
+    .proposal{
+        width: 12rem
+    }
+    .proposal figure{
+        height: 8rem;
     }
 }

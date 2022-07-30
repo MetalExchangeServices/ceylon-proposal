@@ -31,6 +31,11 @@ export default function Home() {
           <Proposal />
           <Proposal />
           <Proposal />
+          <Proposal />
+          <Proposal />
+          <Proposal />
+          <Proposal />
+          <Proposal />
         </div>
         <div className={styles.advertisement_section}>
         </div>

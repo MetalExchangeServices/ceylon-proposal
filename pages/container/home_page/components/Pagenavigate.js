@@ -6,12 +6,12 @@ import { faRightLong } from '@fortawesome/free-solid-svg-icons'
 export default function Pagenavigate() {
     return (
         <>
-            <section>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
+            <section className={styles.Pagenavigate}>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
                 <FontAwesomeIcon icon={faRightLong}></FontAwesomeIcon>
-                <span>67</span>
+                <p>99</p>
             </section>
         </>
     )
