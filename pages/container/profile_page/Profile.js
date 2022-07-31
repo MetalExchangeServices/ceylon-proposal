@@ -4,6 +4,11 @@ import Navbar from '../components/Navbar'
 import Filter from '../components/Filter'
 import Footer from '../components/Footer'
 import Basic_Profile from './component/Basic_Profile'
+import Profile_media from './component/Profile_media'
+import Person_info from './component/Person_info'
+import Parent_info from './component/Parent_info'
+import Family_info from './component/Family_info'
+import Bio_profile from './component/Bio_profile'
 
 export default function Profile() {
   return (
@@ -21,8 +26,17 @@ export default function Profile() {
       <main className={styles.profile}>
         <div className={styles.basic_profile}>
           <Basic_Profile/>
+          <Bio_profile/>
         </div>
-        <div className={styles.detailed_profile}><p>123</p></div>
+        <div className={styles.detailed_profile}>
+          <Profile_media/>
+          <Person_info/>
+          <Family_info/>
+          <div className={styles.parent_profile}>
+            <Parent_info/>
+            <Parent_info/>
+          </div>
+        </div>
         <div className={styles.adds_section}><p>123</p></div>
       </main>
       <Footer/>

@@ -1,0 +1,35 @@
+.bio_profile{
+    width: 100%;
+    background: var(--light-grey);
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem 0rem rgb(0 0 0 / 15%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.bio_profile h4{
+    font-family: var(--poppins);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    color: var(--black-blue);
+    width: 100%;
+    text-align: left;
+}
+.bio_profile div{
+    width: 100%;
+    min-height: auto;
+    outline: none;
+    border-radius: 0.2rem;
+    padding-left: 0.5rem;
+}
+.bio_profile aside{
+    font-size: 0.8rem;
+    font-family: var(--poppins);
+    font-weight: 400;
+    color: var(--black-blue);
+    letter-spacing: 0.01rem;
+}

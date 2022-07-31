@@ -1,0 +1,60 @@
+.Parent_info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--light-grey);
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgb(0 0 0 / 15%);
+}
+.Parent_info h4{
+    font-family: var(--poppins);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    color: var(--black-blue);
+}
+.Parent_info div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+.Parent_info div span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.Parent_info div span p{
+    flex: 1;
+    text-align: left;
+    font-family: var(--poppins);
+    color: var(--grey);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.Parent_info div span p:nth-of-type(1){
+    color: var(--black-blue);
+    font-weight: 500;
+}
+
+/* media query */
+@media screen and (max-width: 900px){
+    .Parent_info div span{
+        padding-left: 0rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .Parent_info div span{
+        padding-left: 0.5rem;
+    }
+}
+@media screen and (min-height: 1350px){
+    .Parent_info div span{
+        padding-left: 0rem;
+    }
+}
