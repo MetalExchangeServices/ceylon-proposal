@@ -1,4 +1,4 @@
-.basic_profile_main{
+.basic_profile_main {
     width: 100%;
     background: var(--light-grey);
     padding: 1rem;
@@ -8,13 +8,15 @@
     border-radius: 0.5rem;
     box-shadow: 0.3rem 0.3rem 0.5rem 0rem rgb(0 0 0 / 15%);
 }
-.basic_header{
+
+.basic_header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.basic_header button{
+
+.basic_header button {
     outline: none;
     border: none;
     background: var(--light-blue);
@@ -27,26 +29,34 @@
     cursor: pointer;
     letter-spacing: 0.01rem;
 }
-.basic_header svg{
+.basic_header svg {
     font-size: 1.2rem;
     color: var(--red-tomato);
     cursor: pointer;
 }
-.basic_header button:nth-last-of-type(1){
+
+.basic_header button:nth-last-of-type(1) {
     background: var(--red-tomato);
     display: none;
 }
-.basic_header button:nth-last-of-type(2){
+
+.basic_header button:nth-last-of-type(2) {
     background: var(--green);
     display: none;
 }
-.basic_image{
+.save_changes{
+    background: var(--light-blue) !important;
+    display: initial !important;
+}
+
+.basic_image {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.basic_image figure{
+
+.basic_image figure {
     width: 9rem;
     height: 9rem;
     background: url(https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80);
@@ -56,20 +66,43 @@
     background-repeat: no-repeat;
     border-radius: 7rem;
 }
-.basic_info{
+.basic_image figure div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    background: hsla(0, 0%, 0%, 0.500);
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+.basic_image figure div input{
+    display: none;
+}
+.basic_image figure div svg{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.basic_info {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 0.2rem;
+    column-gap: 2%;
 }
-.basic_info span{
+
+.basic_info span {
     width: 100%;
     display: flex;
     align-items: center;
 }
-.basic_info span p{
+
+.basic_info span p {
     flex: 1;
     text-align: left;
     font-family: var(--poppins);
@@ -77,14 +110,31 @@
     font-size: 0.7rem;
     font-weight: 400;
 }
-.basic_info span p:first-child{
+.basic_info span input {
+    outline: none;
+    border: none;
+    border-bottom: 0.2rem solid var(--light-blue);
+    background: none;
+    width: 50%;
+    flex: 1;
+    text-align: left;
+    font-family: var(--poppins);
+    color: var(--black-blue);
+    font-size: 0.7rem;
+    font-weight: 400;
+    border-radius: 0rem 0rem 0.2rem 0rem;
+}
+
+.basic_info span p:first-child {
     color: var(--black-blue);
     font-weight: 500;
 }
-.basic_button{
+
+.basic_button {
     width: 100%;
 }
-.basic_button button{
+
+.basic_button button {
     background: var(--red-tomato);
     border: none;
     outline: none;
@@ -99,109 +149,264 @@
     border-radius: 0.2rem;
 }
 
+.basic_like {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basic_like h3 {
+    font-family: var(--poppins);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    color: var(--black-blue)
+}
+
+.basic_like svg {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--red-tomato);
+}
+
+#like {
+    color: var(--grey) !important;
+}
+
+.basic_like button {
+    display: none;
+}
+.save_changes:hover{
+    background: var(--dark-blue) !important;
+}
+
+
 /* effects */
-.basic_header button:nth-last-of-type(3):hover{
+.basic_header button:nth-last-of-type(3):hover {
     background: var(--dark-blue);
     font-weight: 600;
 }
-.basic_header button:nth-last-of-type(2):hover{
+
+.basic_header button:nth-last-of-type(2):hover {
     background: #27cc0c;
     font-weight: 600;
 }
-.basic_header button:nth-last-of-type(1):hover{
+
+.basic_header button:nth-last-of-type(1):hover {
     background: #db1111;
     font-weight: 600;
 }
-.basic_button button:hover{
+
+.basic_button button:hover {
     font-weight: 600;
     background: #db1111;
 }
-.basic_header svg:hover{
+
+.basic_header svg:hover {
     color: #db1111;
+}
+.basic_image figure div:hover{
+    opacity: 1;
 }
 
 /* media query */
-@media screen and (max-width: 900px) and (min-width: 500px){
-    .basic_profile_main{
+@media screen and (max-width: 900px) and (min-width: 500px) {
+    .basic_profile_main {
         display: grid;
         grid-template-columns: auto auto;
-        }
-        .basic_header{
-            order: 2;
-            width: 100%;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: space-evenly;
-        }
-        .basic_image{
-            order: 1;
-            width: min-content;
-            justify-content: flex-start;
-        }
-        .basic_info{
-            order: 4;
-            grid-column: 1/3;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        .basic_button{
-            display: none;
-        }
-        .basic_header button{
-            order: 1;
-            width: 100%;
-            display: initial !important;
-        }
-        .basic_info span{
-            width: 49%;
-        }
-        .basic_header svg{
-            display: none;
-        }
-        .basic_image figure{
-            width: 7rem;
-            height: 7rem;
-        }
+    }
+
+    .basic_header {
+        order: 2;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    .basic_image {
+        order: 1;
+        width: min-content;
+        justify-content: flex-start;
+    }
+
+    .basic_info {
+        order: 4;
+        grid-column: 1/3;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .basic_button {
+        display: none;
+    }
+
+    .basic_header button {
+        order: 1;
+        width: 100%;
+        display: initial !important;
+    }
+
+    .basic_info span {
+        width: 49%;
+    }
+
+    .basic_header svg {
+        display: none;
+    }
+
+    .basic_image figure {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .basic_like {
+        order: 2;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    .basic_like h3 {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .basic_like button {
+        outline: none;
+        border: none;
+        color: var(--white);
+        background: var(--red-tomato);
+        font-family: var(--Roboto);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        letter-spacing: 0.01rem;
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .basic_like svg {
+        color: var(--white);
+        display: none;
+    }
+
+    .basic_like button svg {
+        display: flex;
+    }
+
+    #like {
+        color: var(--white) !important;
+    }
+
+    #like_button {
+        background: var(--grey);
+    }
 }
+
 @media screen and (min-height: 1350px) {
-    .basic_profile_main{
+    .basic_profile_main {
         display: grid;
-        grid-template-columns: min-content auto;
-        }
-        .basic_header{
-            order: 2;
-            width: 100%;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: space-evenly;
-        }
-        .basic_image{
-            order: 1;
-            width: min-content;
-            justify-content: flex-start;
-        }
-        .basic_info{
-            order: 4;
-            grid-column: 1/3;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        .basic_button{
-            display: none;
-        }
-        .basic_header button{
-            order: 1;
-            width: 100%;
-            display: initial !important;
-        }
-        .basic_info span{
-            width: 49%;
-        }
-        .basic_header svg{
-            display: none;
-        }
-        .basic_image figure{
-            width: 7rem;
-            height: 7rem;
-        }
+        grid-template-columns: auto auto;
+    }
+
+    .basic_header {
+        order: 2;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    .basic_image {
+        order: 1;
+        width: min-content;
+        justify-content: flex-start;
+    }
+
+    .basic_info {
+        order: 4;
+        grid-column: 1/3;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .basic_button {
+        display: none;
+    }
+
+    .basic_header button {
+        order: 1;
+        width: 100%;
+        display: initial !important;
+    }
+
+    .basic_info span {
+        width: 49%;
+    }
+
+    .basic_header svg {
+        display: none;
+    }
+
+    .basic_image figure {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .basic_like {
+        order: 2;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    .basic_like h3 {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .basic_like button {
+        outline: none;
+        border: none;
+        color: var(--white);
+        background: var(--red-tomato);
+        font-family: var(--Roboto);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        letter-spacing: 0.01rem;
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .basic_like svg {
+        color: var(--white);
+        display: none;
+    }
+
+    .basic_like button svg {
+        display: flex;
+    }
+
+    #like {
+        color: var(--white) !important;
+    }
+
+    #like_button {
+        background: var(--grey);
+    }
 }

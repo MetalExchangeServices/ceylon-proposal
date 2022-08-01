@@ -9,6 +9,20 @@
     border-radius: 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgb(0 0 0 / 15%);
 }
+.Parent_info span input {
+    outline: none;
+    border: none;
+    border-bottom: 0.2rem solid var(--light-blue);
+    background: none;
+    width: 50%;
+    flex: 1;
+    text-align: left;
+    font-family: var(--poppins);
+    color: var(--black-blue);
+    font-size: 0.7rem;
+    font-weight: 400;
+    border-radius: 0rem 0rem 0.2rem 0rem;
+}
 .Parent_info h4{
     font-family: var(--poppins);
     font-size: 0.9rem;
