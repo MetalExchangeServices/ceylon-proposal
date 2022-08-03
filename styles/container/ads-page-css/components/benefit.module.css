@@ -1,0 +1,88 @@
+.benefit{
+    width: 100%;
+    padding: var(--margin);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+.benefit h2{
+    width: 100%;
+    font-family: var(--poppins);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--black-blue);
+    text-align: center;
+    line-height: 2.7rem;
+    text-align: center;
+    padding: var(--margin);
+    padding-bottom: 2rem;
+}
+.benefit div{
+    width: 100%;
+    padding: var(--margin);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+.benefit div figure{
+    width: 12rem;
+    height: 12rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.benefit div span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    gap: 0.5rem;
+}
+.benefit div span h3{
+    font-family: var(--poppins);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black-blue);
+}
+.benefit div span aside{
+    font-family: var(--poppins);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--grey);
+}
+.rank figure{
+    background: url(../../../../public/rank\ img.png);
+}
+.verify figure{
+    background: url(../../../../public/verify\ img.png);
+    order: 1;
+}
+.time figure{
+    background: url(../../../../public//time\ img.png);
+}
+
+/* media query */
+@media screen and (max-width: 900px) {
+    .benefit div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .verify figure{
+        order: 0;
+    }
+}
+@media screen and (min-height: 1350px) {
+    .benefit div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .verify figure{
+        order: 0;
+    }
+}
