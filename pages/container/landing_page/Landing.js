@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import styles from '../../../styles/container/landing-page-css/landing.module.css'
+import Images from './component/Images'
+import Navbar from './component/Navbar'
+import Content from './component/Content'
 
 export default function Landing() {
   return (
@@ -12,7 +15,13 @@ export default function Landing() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ceylon Proposals</title>
       </Head>
-      <h1>Landing.js</h1>
+      <section className={styles.landing_page}>
+        <Images />
+        <div className={styles.nav_con}>
+          <Navbar />
+          <Content />
+        </div>
+      </section>
     </>
   )
 }

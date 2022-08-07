@@ -1,0 +1,85 @@
+.Images {
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    overflow-x: hidden;
+    grid-template-columns: 100vw 100vw 100vw 100vw 100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.Images figure {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation-name: slider;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.Image1 {
+    background: url(../../../../public/photo-1601120979673-b3f6f4c7d2ba.avif);
+}
+
+.Image2 {
+    background: url(../../../../public/photo-1562616261-7bb659f860ed.avif);
+}
+
+.Image3 {
+    background: url(../../../../public//photo-1550005809-91ad75fb315f.avif);
+}
+
+.Image4 {
+    background: url(../../../../public/photo-1550368566-f9cc32d7392d.avif);
+}
+
+.Image5 {
+    background: url(../../../../public/photo-1601120979673-b3f6f4c7d2ba.avif);
+}
+
+
+@keyframes slider {
+    0% {
+        left: 0vw;
+    }
+
+    10% {
+        left: 0vw;
+    }
+
+    12% {
+        left: -100vw;
+    }
+
+    32% {
+        left: -100vw;
+    }
+
+    34% {
+        left: -200vw;
+    }
+
+    54% {
+        left: -200vw;
+    }
+
+    56% {
+        left: -300vw;
+    }
+
+    76% {
+        left: -300vw;
+    }
+
+    78% {
+        left: -400vw;
+    }
+
+    100% {
+        left: -400vw;
+    }
+}
