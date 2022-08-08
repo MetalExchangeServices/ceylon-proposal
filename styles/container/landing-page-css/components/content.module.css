@@ -1,25 +1,28 @@
-.content{
+.content {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
-.content h1{
+
+.content h1 {
     display: flex;
     font-family: var(--poppins);
     font-size: 2.5rem;
     color: var(--dark-blue);
     font-weight: 600;
 }
-.content h1 pre{
+
+.content h1 pre {
     color: var(--red-tomato);
     font-family: var(--poppins);
     display: flex;
     align-items: center;
     font-weight: 600;
 }
-.content h2{
+
+.content h2 {
     color: var(--black-blue);
     font-family: var(--poppins);
     font-weight: 500;
@@ -27,14 +30,16 @@
     letter-spacing: 0.01rem;
     width: 30rem;
 }
-.content div{
+
+.content div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.7rem;
     padding-top: 1.5rem;
 }
-.content div button{
+
+.content div button {
     font-size: 0.8rem;
     font-family: var(--Roboto);
     background: none;
@@ -48,62 +53,74 @@
     letter-spacing: 0.01rem;
     cursor: pointer;
 }
-.content div button:last-of-type{
+
+.content div button:last-of-type {
     background: var(--red-tomato);
     color: var(--white);
     border: 0.2rem solid var(--red-tomato);
 }
-.content div span{
+
+.content div span {
     height: 2.3rem;
     border: 0.1rem solid var(--grey);
     background: var(--grey);
 }
 
 /* effect */
-.content div button:hover{
+.content div button:hover {
     font-weight: 600;
 }
 
 /* media query */
 @media screen and (max-width: 900px) {
-    .content h2{
+    .content h2 {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 600px) {
-    .content h1{
+    .content h1 {
         font-size: 1.7rem;
     }
-    .content h2{
+
+    .content h2 {
         font-size: 0.7rem;
     }
-    .content div{
+
+    .content div {
         flex-direction: column;
     }
-    .content div span{
+
+    .content div span {
         height: 0rem;
         width: 100%;
     }
-    .content div button{
+
+    .content div button {
         font-size: 0.7rem;
     }
 }
+
 @media screen and (min-height: 1350px) {
-    .content h2{
+    .content h2 {
         width: 100%;
         font-size: 0.7rem;
     }
-    .content h1{
+
+    .content h1 {
         font-size: 2rem;
     }
-    .content div{
+
+    .content div {
         flex-direction: column;
     }
-    .content div span{
+
+    .content div span {
         height: 0rem;
         width: 100%;
     }
-    .content div button{
+
+    .content div button {
         font-size: 0.7rem;
     }
 }

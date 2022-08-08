@@ -180,6 +180,16 @@
 .save_changes:hover{
     background: var(--dark-blue) !important;
 }
+.contect{
+    display: flex;
+    align-items: center;
+    background: var(--light-blue) !important;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.contect svg{
+    font-size: 1rem;
+}
 
 
 /* effects */
@@ -208,6 +218,9 @@
 }
 .basic_image figure div:hover{
     opacity: 1;
+}
+.contect:hover{
+    background: var(--dark-blue) !important;
 }
 
 /* media query */
@@ -269,9 +282,7 @@
     }
 
     .basic_like h3 {
-        order: -1;
-        width: 100%;
-        text-align: center;
+        display: none;
     }
 
     .basic_like button {
@@ -288,7 +299,7 @@
         letter-spacing: 0.01rem;
         display: flex;
         align-items: center;
-        gap: 10%;
+        gap: 0.5rem;
         justify-content: center;
         width: 100%;
     }

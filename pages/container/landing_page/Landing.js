@@ -4,6 +4,7 @@ import Images from './component/Images'
 import Navbar from './component/Navbar'
 import Content from './component/Content'
 
+
 export default function Landing() {
   return (
     <>

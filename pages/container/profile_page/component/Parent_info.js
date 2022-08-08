@@ -8,7 +8,7 @@ export default function Parent_info() {
         <div>
             <span><p>Name</p><p>Rayz</p></span>
             <span><p>Caste</p><p>Qurashi</p></span>
-            <span><p>Country Of Resigent</p><p>Canada</p></span>
+            <span><p>Residence</p><p>Canada</p></span>
             <span><p>Age</p><p>54 Year</p></span>
             <span><p>Religion</p><p>Christan</p></span>
             <span><p>Profession</p><p>Police Officer</p></span>

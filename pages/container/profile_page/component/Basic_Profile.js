@@ -8,14 +8,12 @@ export default function Basic_Profile() {
         <>
             <main className={styles.basic_profile_main}>
                 <section className={styles.basic_header}>
-                    <button>Verify Profile</button>
-                    <Link href='#'>
+                    <Link href={'/container/ads_page/Ads'}><button>Verify Profile</button></Link>
+                    <Link href={'/container/profile_page/Edit_Profile'}>
                     <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
                     </Link>
-                    <button>Edit Profile</button>
-                    <Link href='#'>
+                    <Link href={'/container/profile_page/Edit_Profile'}><button>Edit Profile</button></Link>
                     <button>Hide Profile</button>
-                    </Link>
                 </section>
                 <section className={styles.basic_image}>
                     <figure></figure>
@@ -24,10 +22,6 @@ export default function Basic_Profile() {
                     <span>
                         <p>Name</p>
                         <p>Faisal</p>
-                    </span>
-                    <span>
-                        <p>Caste</p>
-                        <p>Qurashi</p>
                     </span>
                     <span>
                         <p>Country</p>

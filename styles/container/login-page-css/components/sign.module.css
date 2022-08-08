@@ -123,6 +123,7 @@
     outline: none;
     background-color: var(--light-blue);
     border-radius: 0.4rem;
+    cursor: pointer;
 }
 .login_button p{
     width: 100%;
@@ -199,6 +200,14 @@
     color: #7b1a9a;
     text-decoration: underline;
 }
+.cancel{
+    font-size: 1rem;
+    color: var(--dark-blue);
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    display: none;
+}
 
 
 /* effects */
@@ -212,4 +221,36 @@
 .switch p:last-of-type:hover{
     font-weight: 500;
     color: var(--red-tomato);
+}
+.cancel:hover{
+    color: var(--red-tomato);
+}
+
+/* media query */
+@media screen and (max-width: 600px) {
+    .sigin{
+        padding: 2rem 1rem;
+    }
+    .cancel{
+        right: 1rem;
+        display: initial;
+    }
+}
+@media screen and (max-width: 900px) {
+    .sigin{
+        padding: 2rem 2rem;
+    }
+    .cancel{
+        right: 2rem;
+        display: initial;
+    }
+}
+@media screen and (min-height: 1350px) {
+    .sigin{
+        padding: 2rem 2rem;
+    }
+    .cancel{
+        right: 2rem;
+        display: initial;
+    }
 }

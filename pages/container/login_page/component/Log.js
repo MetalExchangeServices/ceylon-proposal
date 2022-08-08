@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
 import { faGoogle, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
+import Link from 'next/link'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export default function Log() {
     const [Show, setShow] = useState(faEye)
@@ -25,22 +27,25 @@ export default function Log() {
     return (
         <>
             <section className={styles.sigin}>
+                <Link href={'/container/home_page/Home'}>
+                    <FontAwesomeIcon className={styles.cancel} icon={faXmark}></FontAwesomeIcon>
+                </Link>
                 <h3>LOGIN</h3>
                 <form className={styles.form}>
                     <div className={styles.email}>
                         <p>Email</p>
                         <span>
-                            <input placeholder='Example@gmail.com'/>
+                            <input placeholder='Example@gmail.com' />
                         </span>
                     </div>
                     <div className={styles.password}>
                         <p>Password</p>
                         <span>
-                            <input type={Type} placeholder='Enter Password'/>
+                            <input type={Type} placeholder='Enter Password' />
                             <FontAwesomeIcon icon={Show} onClick={visibal_password}></FontAwesomeIcon>
                         </span>
                         <div className={styles.remember_me}>
-                            <input type='checkbox' id='remember_me'/>
+                            <input type='checkbox' id='remember_me' />
                             <label htmlFor='remember_me'><p>Remember me?</p></label>
                         </div>
                     </div>

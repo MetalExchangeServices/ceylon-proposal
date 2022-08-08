@@ -1,6 +1,7 @@
 import styles from '../../../../styles/container/home-page-css/components/porposal.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faExclamation } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 export default function Proposal() {
   return (
@@ -30,7 +31,7 @@ export default function Proposal() {
         </div>
         <aside> The proposed daughter is 25 years old,5.3” in height ​pretty ​very fair and well-mannered. She studied overseas and completed her final year MBBS exam in a medical faculty in Sri Lanka. She is waiting for selection for the internship in a teaching hospital. Overseas responses are considered</aside>
         <div className={styles.button}>
-            <button>More Info</button>
+            <Link href={'/container/profile_page/Proposal'}><button>More Info</button></Link>
         </div>
       </main>
     </>

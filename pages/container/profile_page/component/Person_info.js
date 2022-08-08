@@ -4,7 +4,10 @@ export default function Person_info() {
     return(
         <>
         <section className={styles.Person_info}>
-        <h4>Person Info</h4>
+        <div>
+            <h5>Person Info</h5>
+            <span><p>Created By</p><p>12/7/2022</p></span>
+        </div>
         <div>
             <h5>Education</h5>
             <span><p>University</p><p>University of alberta</p></span>
@@ -22,7 +25,6 @@ export default function Person_info() {
             <span><p>Drinking</p><p>Monthly</p></span>
             <span><p>Smoking</p><p>No</p></span>
             <span><p>Food Preference</p><p>Vegetarian</p></span>
-            <span><p>Disease</p><p>No</p></span>
         </div>
         </section>
         </>

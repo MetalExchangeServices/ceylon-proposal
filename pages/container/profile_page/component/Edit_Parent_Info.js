@@ -8,7 +8,7 @@ export default function Edit_Parent_info() {
         <div>
             <span><p>Name</p><input/></span>
             <span><p>Caste</p><input/></span>
-            <span><p>Country Of Resigent</p><input/></span>
+            <span><p>Residence</p><input/></span>
             <span><p>Age</p><input/></span>
             <span><p>Religion</p><input/></span>
             <span><p>Profession</p><input/></span>

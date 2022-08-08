@@ -4,7 +4,10 @@ export default function Edit_Person_info() {
     return(
         <>
         <section className={styles.Person_info}>
-        <h4>Person Info</h4>
+        <div>
+            <h5>Person Info</h5>
+            <span><p>Created By</p></span>
+        </div>
         <div>
             <h5>Education</h5>
             <span><p>University</p><input/></span>
@@ -22,7 +25,6 @@ export default function Edit_Person_info() {
             <span><p>Drinking</p><input/></span>
             <span><p>Smoking</p><input/></span>
             <span><p>Food Preference</p><input/></span>
-            <span><p>Disease</p><input/></span>
         </div>
         </section>
         </>

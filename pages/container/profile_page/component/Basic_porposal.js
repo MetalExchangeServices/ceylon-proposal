@@ -1,6 +1,7 @@
 import styles from '../../../../styles/container/profile-page-css/components/basic_profile.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faExclamationCircle, faMessage } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 export default function Basic_Proposal() {
     return (
@@ -12,6 +13,7 @@ export default function Basic_Proposal() {
                     <h3>Profile</h3>
                     <button><FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon>Report</button>
                     <FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon>
+                    <Link href={'/container/inbox_page/Inbox'}><button className={styles.contect}><FontAwesomeIcon icon={faMessage}></FontAwesomeIcon>Contect</button></Link>
                 </section>
                 <section className={styles.basic_image}>
                     <figure></figure>
@@ -20,10 +22,6 @@ export default function Basic_Proposal() {
                     <span>
                         <p>Name</p>
                         <p>Faisal</p>
-                    </span>
-                    <span>
-                        <p>Caste</p>
-                        <p>Qurashi</p>
                     </span>
                     <span>
                         <p>Country</p>
@@ -51,7 +49,7 @@ export default function Basic_Proposal() {
                     </span>
                 </section>
                 <section className={styles.basic_button}>
-                    <button>Hide Proposal</button>
+                    <Link href={'/container/inbox_page/Inbox'}><button className={styles.contect}><FontAwesomeIcon icon={faMessage}></FontAwesomeIcon>Contect</button></Link>
                 </section>
             </main>
         </>

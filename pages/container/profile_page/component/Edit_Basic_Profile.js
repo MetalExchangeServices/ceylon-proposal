@@ -9,8 +9,8 @@ export default function Edit_Basic_Profile() {
             <main className={styles.basic_profile_main}>
                 <section className={styles.basic_header}>
                     <button className={styles.save_changes}>Save Changes</button>
-                    <FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon>
-                    <button>Discard Changes</button>
+                    <Link href={'/container/profile_page/Profile'}><FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon></Link>
+                    <Link href={'/container/profile_page/Profile'}><button>Discard Changes</button></Link>
                 </section>
                 <section className={styles.basic_image}>
                     <figure>
@@ -25,10 +25,6 @@ export default function Edit_Basic_Profile() {
                 <section className={styles.basic_info}>
                     <span>
                         <p>Name</p>
-                        <input/>
-                    </span>
-                    <span>
-                        <p>Caste</p>
                         <input/>
                     </span>
                     <span>

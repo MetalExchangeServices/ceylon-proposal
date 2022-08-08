@@ -1,12 +1,13 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../../../styles/container/login-page-css/login.module.css'
 import Log from './component/Log'
 import Sign from './component/Sign'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
-
 export default function Login() {
+
   return (
     <>
       <Head>
@@ -23,13 +24,17 @@ export default function Login() {
           <section className={styles.section1} id='section_login'>
             <Log />
             <figure>
-            <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+              <Link href={'/container/home_page/Home'}>
+                <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+              </Link>
             </figure>
           </section>
           <section className={styles.section2} id='section_signup'>
             <Sign />
             <figure>
-              <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+              <Link href={'/container/home_page/Home'}>
+                <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+              </Link>
             </figure>
           </section>
         </div>
