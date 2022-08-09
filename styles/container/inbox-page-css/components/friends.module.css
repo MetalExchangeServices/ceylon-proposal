@@ -1,0 +1,185 @@
+.main{
+    width: 30%;
+    height: 100%;
+    background: var(--light-grey);
+    border-radius: 1rem;
+    overflow-y: hidden;
+}
+.header{
+    box-shadow: 0.2rem 0rem 0.13rem 0.3rem rgb(0 0 0 / 12%);
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.header input{
+    width: 100%;
+    font-size: 0.8rem;
+    outline: none;
+    background: var(--white);
+    color: var(--black-blue);
+    font-family: var(--Roboto);
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    background: none;
+    font-weight: 400;
+    border: none;
+}
+.header svg{
+    font-size: 1.2rem;
+    color: var(--black-blue);
+    cursor: pointer;
+}
+.header span{
+    border: 0.1rem solid var(--black-blue);
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+}
+.header span svg{
+    font-size: 1rem;
+}
+.friends_section{
+    height: 100%;
+}
+.friends{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    padding-top: 0rem;
+    margin-top: 1rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.friends::-webkit-scrollbar{
+    display: none;
+}
+.friend{
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--light-blue);
+    cursor: pointer;
+}
+.friend figure{
+    background: url(https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80);
+    width: 2.3rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2.3rem;
+    border-radius: 3rem;
+}
+.friend div{
+    flex: 1;
+}
+.friend div span{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+.friend div span h5{
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: var(--Roboto);
+    color: var(--black-blue);
+}
+.friend div span p{
+    font-size: 0.6rem;
+    font-family: var(--Roboto);
+    color: var(--light-blue);
+    letter-spacing: 0.01rem;
+}
+.friend div aside{
+    display: flex;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    font-family: var(--poppins);
+    gap: 1%;
+    color: var(--black-blue);
+}
+.friend div aside p{
+    font-weight: 500;
+}
+.friends h4{
+    font-size: 0.9rem;
+    color: var(--black-blue);
+    font-family: var(--poppins);
+    font-weight: 600;
+    width: 100%;
+}
+.friend:first-child{
+    background: var(--light-blue);
+}
+.friend:first-child div span h5{
+    color: var(--white);
+}
+.friend:first-child div span p{
+    color: var(--green);
+}
+.friend:first-child div aside{
+    color: var(--white);
+}
+.inbox_filter{
+    height: 100%;
+    position: relative;
+    background: var(--light-grey);
+    width: 100%;
+    margin-top: 0.5rem;
+    /* bottom: -100%; */
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition-duration: 0.5s;
+}
+.inbox_filter h5{
+    font-size: 0.9rem;
+    color: var(--black-blue);
+    font-family: var(--poppins);
+    font-weight: 600;
+}
+.inbox_filter span{
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.inbox_filter span p{
+    font-size: 0.8rem;
+    font-family: var(--poppins);
+    font-weight: 500;
+    color: var(--grey);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.header label input{
+    display: none;
+}
+
+
+/* effects */
+.header span svg:hover{
+    color: var(--red-tomato);
+}
+.inbox_filter span p:hover{
+    color: var(--red-tomato);
+    padding-left: 0.5rem;
+}
+.filter_input:checked+.filter_icon_inbox{
+    color: var(--red-tomato);
+}
