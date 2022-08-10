@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import styles from '../../../styles/container/inbox-page-css/inbox.module.css'
 import Navbar from '../components/Navbar'
+import Filter from '../components/Filter'
 import Friends from './component/Friends'
-import Chats from './component/chats'
+import Chats from './component/Chats'
 
 export default function Inbox() {
   return (
@@ -16,7 +17,8 @@ export default function Inbox() {
         <title>Ceylon Proposals | Inbox</title>
       </Head>
       <section className={styles.main}>
-        <Navbar></Navbar>
+        <Navbar/>
+        <Filter/>
         <div className={styles.inbox}>
           <Friends/>
           <Chats/>
