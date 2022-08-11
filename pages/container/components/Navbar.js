@@ -2,12 +2,13 @@ import style from '../../../styles/container/components-css/navbar.module.css';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faArrowDownWideShort, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDownWideShort, faBars, faGear, faLanguage, faCaretDown, faIdCard, faRepeat, faRightFromBracket, faRightToBracket, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const [Language, setLanguage] = useState('English');
   const [LanguageField, setLanguageField] = useState('');
   const [Navbar, setNavbar] = useState(style.navbar_on);
+  const [Language_select, setLanguage_select] = useState('none')
 
   useEffect(() => {
     window.addEventListener('scroll', navbar)
@@ -22,6 +23,10 @@ export default function Navbar() {
   }
   const language = (e) => {
     setLanguage(e.target.innerText)
+    setLanguage_select('none')
+  }
+  const language_select = () => {
+    setLanguage_select('flex')
   }
   const Filter_tab = (e) => {
     if (e.target.checked === false) {
@@ -69,19 +74,32 @@ export default function Navbar() {
           </Link>
         </div>
         <div className={style.nav_icons}>
-          <label htmlFor='language'>
-            <input className={style.language} type={'checkbox'} onChange={language_f} id='language'></input>
-            <FontAwesomeIcon className={style.language_icon} icon={faGlobe}></FontAwesomeIcon>
+          <div>
+            <label htmlFor='language'>
+              <input className={style.language} type={'checkbox'} onChange={language_f} id='language'></input>
+              <FontAwesomeIcon className={style.language_icon} icon={faGear}></FontAwesomeIcon>
+            </label>
             <div className={style.languages_select} id={LanguageField}>
-              <div></div>
-              <span className={style.language_hadding}>{Language}</span>
-              <span className={style.language_container}>
-                <p onClick={language}>English</p>
-                <p onClick={language}>Tamil</p>
-                <p onClick={language}>Sinhala</p>
-              </span>
+              <div className={style.language_section}>
+                <h5><FontAwesomeIcon icon={faLanguage}></FontAwesomeIcon>Language</h5>
+                <span onClick={language_select}>{Language}<FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></span>
+                <div style={{display: Language_select}}>
+                  <p onClick={language}>English</p>
+                  <p onClick={language}>Tamil</p>
+                  <p onClick={language}>Sinhala</p>
+                </div>
+              </div>
+              <div className={style.Account}>
+                <h5><FontAwesomeIcon icon={faIdCard}></FontAwesomeIcon>Account</h5>
+                <div>
+                  <button><FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>SignIn</button>
+                  <button><FontAwesomeIcon icon={faRightToBracket}></FontAwesomeIcon>LogIn</button>
+                  <button><FontAwesomeIcon icon={faRepeat}></FontAwesomeIcon>Switch</button>
+                  <button><FontAwesomeIcon icon={faRightFromBracket}></FontAwesomeIcon>LogOut</button>
+                </div>
+              </div>
             </div>
-          </label>
+          </div>
           <label className={style.filter_icon} htmlFor='filter'>
             <input onChange={Filter_tab} className={style.filter} type={'checkbox'} id='filter'></input>
             <FontAwesomeIcon className={style.filter_icon} icon={faArrowDownWideShort}></FontAwesomeIcon>

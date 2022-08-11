@@ -1,6 +1,6 @@
 import styles from '../../../../styles/container/home-page-css/components/porposal.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleCheck, faExclamation } from '@fortawesome/free-solid-svg-icons'
+import { faCircleCheck, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
 export default function Proposal() {
@@ -11,7 +11,7 @@ export default function Proposal() {
             <div className={styles.img_top}>
                 <FontAwesomeIcon className={styles.verify} icon={faCircleCheck}></FontAwesomeIcon>
                 <p>Doctor</p>
-                <FontAwesomeIcon className={styles.report} icon={faExclamation}></FontAwesomeIcon>
+                <FontAwesomeIcon className={styles.report} icon={faExclamationCircle}></FontAwesomeIcon>
             </div>
             <div className={styles.image_changer}>
                 <span></span>

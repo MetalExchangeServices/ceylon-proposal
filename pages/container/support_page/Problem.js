@@ -3,9 +3,9 @@ import styles from '../../../styles/container/support-page-css/support.module.cs
 import Navbar from '../components/Navbar'
 import Filter from '../components/Filter'
 import Footer from '../components/Footer'
-import FandQ from './component/FandQ'
+import Report from './component/Report'
 
-export default function Support() {
+export default function Problem() {
   return (
     <>
       <Head>
@@ -20,7 +20,7 @@ export default function Support() {
       <Filter />
       <main className={styles.home_main}>
         <div className={styles.porposals_section}>
-          <FandQ />
+            <Report/>
         </div>
         <div className={styles.advertisement_section}>
         </div>

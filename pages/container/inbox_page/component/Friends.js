@@ -1,6 +1,6 @@
 import styles from '../../../../styles/container/inbox-page-css/components/friends.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSliders, faSearch, faClipboard } from '@fortawesome/free-solid-svg-icons'
+import { faSliders, faSearch, faUserGroup, faUserPlus, faUserClock, faEnvelopeOpen, faUserSlash, faFileZipper } from '@fortawesome/free-solid-svg-icons'
 import { useState ,useEffect } from 'react'
 
 export default function Friends() {
@@ -15,7 +15,7 @@ export default function Friends() {
 
     const filter = (e) => {
         if (e.target.checked == true) {
-            setFilter_slider('105%')
+            setFilter_slider('104%')
         } else {
             setFilter_slider('0%')
         }
@@ -133,12 +133,12 @@ export default function Friends() {
                     <div className={styles.inbox_filter} style={{bottom: Filter_slider}}>
                         <h5>Inbox Filter</h5>
                         <span>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>Friends</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>Invites</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>Requests</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>UnRead</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>Achieve</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>Block</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserGroup}></FontAwesomeIcon>Friends</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserPlus}></FontAwesomeIcon>Invites</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserClock}></FontAwesomeIcon>Requests</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faEnvelopeOpen}></FontAwesomeIcon>UnRead</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faFileZipper}></FontAwesomeIcon>Achieve</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserSlash}></FontAwesomeIcon>Block</p>
                         </span>
                     </div>
                 </div>

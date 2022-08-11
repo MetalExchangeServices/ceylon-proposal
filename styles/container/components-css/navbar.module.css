@@ -15,7 +15,7 @@
     height: 3rem;
     width: 7rem;
     margin: 0.5rem 0rem;
-    background-image: url(../../../public/image\ 5.svg);
+    background-image: url(../../../public//new\ logo\ 20.svg);
     background-size: contain;
     background-position: center left;
     background-repeat: no-repeat;
@@ -66,43 +66,98 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     top: 5rem;
-    padding: 0.8rem;
-    background: var(--red-tomato);
-    box-shadow: 0.3rem 0rem 1rem 0rem rgb(0 0 0 / 12%);
+    right: 1rem;
+    padding: 1rem;
+    background: var(--light-grey);
+    box-shadow: 0.3rem 0.3rem 0.5rem 0rem rgb(0 0 0 / 15%);
     border-radius: 0.5rem;
     transform: scale(0);
     transition-duration: 0.1s;
 }
-.languages_select div{
-    display: none;
+.language_section,.Account{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
-.languages_select span{
-    display: block;
-    color: var(--white);
-    background: none;
-    font-weight: 500;
+.language_section h5,.Account h5{
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    font-family: var(--Roboto);
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: var(--black-blue);
+}
+.language_section h5 svg,.Account h5 svg{
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+.language_section span{
     font-size: 0.8rem;
-    font-family: var(--poppins);
-    border: 0.2rem solid var(--light-grey);
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    font-family: var(--Roboto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--black-blue);
+    padding: 0.1rem 0.4rem;
+    border: 0.2rem solid var(--light-blue);
     border-radius: 0.2rem;
-}
-.languages_select span p{
-    line-height: 1.5rem;
-    padding: 0rem 0.5rem;
     cursor: pointer;
 }
-.language_container p{
-    font-weight: 400;
-    cursor: pointer;
+.language_section span svg{
+    font-size: 0.9rem;
+    color: var(--light-blue);
 }
-.language_hadding{
-    font-weight: 500;
+.language_section div{
+    padding: 0.1rem 0.4rem;
+    border: 0.2rem solid var(--light-blue);
+    border-radius: 0.2rem;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.language_section div p{
     font-size: 0.8rem;
-    line-height: 1.5rem;
-    padding: 0rem 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+    font-family: var(--Roboto);
+    cursor: pointer;
 }
+.Account{
+    width: 100%;
+}
+.Account div{
+    padding: 0.1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.Account div button{
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: var(--Roboto);
+    background: var(--light-blue);
+    border-radius: 0.2rem;
+    outline: none;
+    border: none;
+    color: var(--white);
+    padding: 0.3rem 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+.Account div button svg{
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
 
 
 #menu_lable {
@@ -133,6 +188,14 @@
     background: var(--light-blue);
     font-weight: 500;
 }
+.Account div button:hover{
+    background: var(--dark-blue);
+    font-weight: 500;   
+}
+.language_section div p:hover{
+    font-weight: 600;
+    color: var(--red-tomato);
+}
 
 /* media query */
 @media screen and (max-width: 900px) {
@@ -154,13 +217,6 @@
     .nav_icons{
         margin-left: 0rem;
     }
-    .languages_select div{
-        display: none;
-    }
-    .languages_select{
-        right: 1rem;
-        border-radius: 0.5rem;
-    }
 }
 @media screen and (min-height: 1350px) {
     .a_container {
@@ -180,12 +236,5 @@
     }
     .nav_icons{
         margin-left: 0rem;
-    }
-    .languages_select div{
-        display: none;
-    }
-    .languages_select{
-        right: 1rem;
-        border-radius: 0.5rem;
     }
 }

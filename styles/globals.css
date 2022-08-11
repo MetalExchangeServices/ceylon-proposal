@@ -8,11 +8,11 @@
     /* color root */
     --dark-blue: #117182;
     --light-blue: #42AFC2;
-    --red-tomato: #FF4C4C;
+    --red-tomato: #d41717;
     --light-grey: #F1F1F1;
     --grey: #C0C7C8;
     --white: #ffffff;
-    --black-blue: #455A5C;
+    --black-blue: #334747;
     --white-blue: #EAF4F7;
     --black: #000000;
     --green: #65FF4C;
@@ -27,7 +27,11 @@
 
 html,
 body {
-    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+#__next{
+    height: 100%;
     width: 100%;
 }
 

@@ -51,11 +51,7 @@
 
 .report {
     color: var(--red-tomato);
-    border: 0.1rem solid var(--red-tomato);
-    width: 0.6rem;
-    height: 0.6rem;
-    font-size: 0.6rem;
-    padding: 0.1rem;
+    background: white;
 }
 
 .image_changer {
