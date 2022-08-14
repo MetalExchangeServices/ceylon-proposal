@@ -1,6 +1,7 @@
 import styles from '../../../../styles/container/inbox-page-css/components/chats.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faCircleExclamation, faUserLock ,faEnvelopeOpenText ,faImage ,faGift, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 export default function Chats() {
 
@@ -19,7 +20,7 @@ export default function Chats() {
                     <span className={styles.icon_section}>
                         <FontAwesomeIcon icon={faEnvelopeOpenText}></FontAwesomeIcon>
                         <FontAwesomeIcon icon={faUserLock}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faCircleExclamation}></FontAwesomeIcon>
+                        <Link href={'/container/support_page/User_problem'}><FontAwesomeIcon icon={faCircleExclamation}></FontAwesomeIcon></Link>
                     </span>
                 </header>
                 <div className={styles.chats_main}>

@@ -1,14 +1,18 @@
 .home_main {
     padding: var(--margin);
     width: 100%;
-    padding-top: 6rem;
+    padding-top: 7rem;
     display: flex;
     height: auto;
+    padding-bottom: 4rem;
 }
 
 .porposals_section {
     width: 75%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .advertisement_section {

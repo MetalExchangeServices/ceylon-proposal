@@ -11,7 +11,7 @@ export default function Proposal() {
             <div className={styles.img_top}>
                 <FontAwesomeIcon className={styles.verify} icon={faCircleCheck}></FontAwesomeIcon>
                 <p>Doctor</p>
-                <FontAwesomeIcon className={styles.report} icon={faExclamationCircle}></FontAwesomeIcon>
+                <Link href={'/container/support_page/User_problem'}><FontAwesomeIcon className={styles.report} icon={faExclamationCircle}></FontAwesomeIcon></Link>
             </div>
             <div className={styles.image_changer}>
                 <span></span>

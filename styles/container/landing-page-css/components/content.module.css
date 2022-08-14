@@ -12,9 +12,11 @@
     font-size: 2.5rem;
     color: var(--dark-blue);
     font-weight: 600;
+    text-transform: capitalize;
+    gap: 0.5rem;
 }
 
-.content h1 pre {
+.content h1 p {
     color: var(--red-tomato);
     font-family: var(--poppins);
     display: flex;
@@ -30,11 +32,12 @@
     letter-spacing: 0.01rem;
     width: 30rem;
 }
-
+.content h2::first-letter{
+    text-transform: capitalize;
+}
 .content div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 0.7rem;
     padding-top: 1.5rem;
 }

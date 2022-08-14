@@ -2,13 +2,14 @@ import style from '../../../styles/container/components-css/navbar.module.css';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDownWideShort, faBars, faGear, faLanguage, faCaretDown, faIdCard, faRepeat, faRightFromBracket, faRightToBracket, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDownWideShort, faBars, faGear, faLanguage, faCaretDown, faCaretUp, faIdCard, faRepeat, faRightFromBracket, faRightToBracket, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const [Language, setLanguage] = useState('English');
   const [LanguageField, setLanguageField] = useState('');
   const [Navbar, setNavbar] = useState(style.navbar_on);
   const [Language_select, setLanguage_select] = useState('none')
+  const [Language_input, setLanguage_input] = useState(faCaretDown)
 
   useEffect(() => {
     window.addEventListener('scroll', navbar)
@@ -24,9 +25,16 @@ export default function Navbar() {
   const language = (e) => {
     setLanguage(e.target.innerText)
     setLanguage_select('none')
+    setLanguage_input(faCaretDown)
   }
   const language_select = () => {
-    setLanguage_select('flex')
+    if (Language_select === 'flex') {
+      setLanguage_select('none')
+      setLanguage_input(faCaretDown)
+    } else {
+      setLanguage_select('flex')
+      setLanguage_input(faCaretUp)
+    }
   }
   const Filter_tab = (e) => {
     if (e.target.checked === false) {
@@ -58,7 +66,7 @@ export default function Navbar() {
         <figure className={style.nav_logo}></figure>
         <div className={style.a_container}>
           <Link href='/container/home_page/Home'>
-            <p>Home</p>
+            <p>Proposals</p>
           </Link>
           <Link href='/container/profile_page/Profile'>
             <p>Profile</p>
@@ -82,8 +90,8 @@ export default function Navbar() {
             <div className={style.languages_select} id={LanguageField}>
               <div className={style.language_section}>
                 <h5><FontAwesomeIcon icon={faLanguage}></FontAwesomeIcon>Language</h5>
-                <span onClick={language_select}>{Language}<FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></span>
-                <div style={{display: Language_select}}>
+                <span onClick={language_select}>{Language}<FontAwesomeIcon icon={Language_input}></FontAwesomeIcon></span>
+                <div style={{ display: Language_select }}>
                   <p onClick={language}>English</p>
                   <p onClick={language}>Tamil</p>
                   <p onClick={language}>Sinhala</p>

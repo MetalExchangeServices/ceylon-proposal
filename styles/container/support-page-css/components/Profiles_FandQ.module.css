@@ -1,0 +1,80 @@
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.profiles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profiles span figure{
+    width: 5rem;
+    height: 5rem;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center center !important;
+    border-radius: 5rem;
+}
+.profiles span{
+    border-radius: 5rem;
+    border: 0.3rem solid var(--white);
+    position: relative;
+}
+.profiles span:nth-of-type(1){
+    background: #acb677;
+    top: 1rem;
+    left: 2rem;
+}
+.profiles span:nth-of-type(2){
+    background: #c6b9da;
+    z-index: 1;
+}
+.profiles span:nth-of-type(3){
+    background: #d9b9bb;
+    top: 1rem;
+    right: 2rem;
+}
+.profiles span:nth-of-type(1) figure{
+    background: url(../../../../public/unsplash_L2dTmhQzx4Q.png);
+}
+.profiles span:nth-of-type(2) figure{
+    background: url(../../../../public/girl_image.png)
+}
+.profiles span:nth-of-type(3) figure{
+    background: url(../../../../public//unsplash_ZHvM3XIOHoE.png);
+}
+.hading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.1rem;
+}
+.hading h5{
+    color: var(--black-blue);
+    font-size: 0.8rem;
+    font-family: var(--intera);
+    font-weight: 500;
+    text-align: center;
+}
+.hading a{
+    font-family: var(--intera);
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: underline var(--light-blue);
+    text-align: center;
+}
+
+/* media_query */
+@media screen and (max-width: 900px) {
+    .profiles span figure{
+        width: 4rem;
+        height: 4rem;
+    }
+}

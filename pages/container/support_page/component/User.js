@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faCircleXmark, faUpload } from '@fortawesome/free-solid-svg-icons';
 
-export default function Report() {
+export default function User() {
     const FandQ_open = (e) => {
         if (e.target.parentElement.parentElement.getAttribute('id') === Styles.FandQ_open) {
             e.target.parentElement.parentElement.setAttribute('id', '');

@@ -11,8 +11,8 @@ export default function Basic_Proposal() {
                     <FontAwesomeIcon icon={faHeart} id={styles.like}></FontAwesomeIcon>
                     <button id={styles.like_button}><FontAwesomeIcon icon={faHeart} id={styles.like}></FontAwesomeIcon>Like</button>
                     <h3>Profile</h3>
-                    <button><FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon>Report</button>
-                    <FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon>
+                    <Link href={'/container/support_page/User_problem'}><button><FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon>Report</button></Link>
+                    <Link href={'/container/support_page/User_problem'}><FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon></Link>
                     <Link href={'/container/inbox_page/Inbox'}><button className={styles.contect}><FontAwesomeIcon icon={faMessage}></FontAwesomeIcon>Contect</button></Link>
                 </section>
                 <section className={styles.basic_image}>
