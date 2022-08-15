@@ -18,7 +18,7 @@ export default function FandQ() {
                 <div className={Styles.hadding}>
                     <h3>Help Center For Our Customer</h3>
                     <span>
-                        <Link href={'/container/support_page/Support'}><p>(F&Qs)</p></Link>
+                        <Link href={'/container/support_page/Support'}><p>(FQs)</p></Link>
                         <Link href={'/container/support_page/Problem'}><p>(Reports)</p></Link>
                     </span>
                 </div>
@@ -29,7 +29,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -37,7 +37,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -45,7 +45,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -53,7 +53,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -61,7 +61,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -69,7 +69,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -77,7 +77,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -85,7 +85,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -93,7 +93,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                     <div className={Styles.FandQ}>
                         <span>
@@ -101,7 +101,7 @@ export default function FandQ() {
                             <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
                         </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</aside>
+                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
                     </div>
                 </div>
             </section>

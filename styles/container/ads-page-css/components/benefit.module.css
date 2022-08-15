@@ -1,4 +1,4 @@
-.benefit{
+.benefit {
     width: 100%;
     padding: var(--margin);
     display: flex;
@@ -7,7 +7,8 @@
     padding-top: 1rem;
     padding-bottom: 3rem;
 }
-.benefit h2{
+
+.benefit h2 {
     width: 100%;
     font-family: var(--poppins);
     font-weight: 600;
@@ -19,7 +20,11 @@
     padding: var(--margin);
     padding-bottom: 2rem;
 }
-.benefit div{
+.benefit h2::first-letter{
+    text-transform: capitalize;
+}
+
+.benefit div {
     width: 100%;
     padding: var(--margin);
     display: flex;
@@ -27,14 +32,16 @@
     align-items: center;
     gap: 10%;
 }
-.benefit div figure{
+
+.benefit div figure {
     width: 12rem;
     height: 12rem;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.benefit div span{
+
+.benefit div span {
     width: 100%;
     height: 100%;
     display: flex;
@@ -44,45 +51,61 @@
     flex: 1;
     gap: 0.5rem;
 }
-.benefit div span h3{
+
+.benefit div span h3 {
     font-family: var(--poppins);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--black-blue);
 }
-.benefit div span aside{
+
+.benefit div span h3::first-letter {
+    text-transform: uppercase;
+}
+
+.benefit div span aside {
     font-family: var(--poppins);
     font-size: 0.7rem;
     font-weight: 500;
     color: var(--grey);
 }
-.rank figure{
-    background: url(../../../../public/rank\ img.png);
+
+.benefit div span aside::first-letter {
+    text-transform: uppercase;
 }
-.verify figure{
-    background: url(../../../../public/verify\ img.png);
+
+.benefit div:nth-last-child(1) figure {
+    background-image: url(../../../../public/time.png);
+}
+
+.benefit div:nth-last-child(2) figure {
     order: 1;
+    background-image: url(../../../../public/verify.png);
 }
-.time figure{
-    background: url(../../../../public//time\ img.png);
+
+.benefit div:nth-last-child(3) figure {
+    background-image: url(../../../../public/rank.png);
 }
 
 /* media query */
 @media screen and (max-width: 900px) {
-    .benefit div{
+    .benefit div {
         flex-direction: column;
         align-items: center;
     }
-    .verify figure{
+
+    .verify figure {
         order: 0;
     }
 }
+
 @media screen and (min-height: 1350px) {
-    .benefit div{
+    .benefit div {
         flex-direction: column;
         align-items: center;
     }
-    .verify figure{
+
+    .verify figure {
         order: 0;
     }
 }

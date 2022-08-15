@@ -3,19 +3,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import Content_api from '../../api/content_api';
+const Website_social_link = {
+  facebook: '/',
+  twitter: '/',
+  instagram: '/',
+  tiktok: '/',
+  snapchat: '/'
+}
 
 export default function Footer() {
-  const Content = Content_api.Website_info
-  const Social_media = Content_api.Website_social_link
-
     return (
     <>
     <footer className={style.footer}>
       <div className={style.footer_main}>
         <div className={style.logo_searchs}>
           <figure></figure>
-          <p>{Content.website_discription}</p>
+          <p>in this website their are lot of proposal of your type and try to find best proposal of your type and also publish your adds to get more offers for your future patner and we can give your future patner here</p>
           <div>
           <span><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon><input placeholder='Enter Email' className={style.email}/></span>
           <span><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon><input placeholder='Search User' className={style.user}/></span>
@@ -24,11 +27,11 @@ export default function Footer() {
         <div className={style.footer_links}>
           <div>
             <h5>Social Media</h5>
-            <Link href={Social_media.facebook}>Facebook</Link>
-            <Link href={Social_media.twitter}>Twitter</Link>
-            <Link href={Social_media.instagram}>Instagram</Link>
-            <Link href={Social_media.tiktok}>Tiktok</Link>
-            <Link href={Social_media.snapchat}>Snapchat</Link>
+            <Link href={Website_social_link.facebook}>Facebook</Link>
+            <Link href={Website_social_link.twitter}>Twitter</Link>
+            <Link href={Website_social_link.instagram}>Instagram</Link>
+            <Link href={Website_social_link.tiktok}>Tiktok</Link>
+            <Link href={Website_social_link.snapchat}>Snapchat</Link>
           </div>
           <div>
             <h5>Pages</h5>
@@ -56,7 +59,7 @@ export default function Footer() {
       </div>
       <div className={style.footer_rights}>
         <FontAwesomeIcon icon={faCopyright}></FontAwesomeIcon>
-        <p>All Rights Reserve By Ceylon Porporsal</p>
+        <p>all rights reserve by ceylon porporsal</p>
       </div>
     </footer>
     </>

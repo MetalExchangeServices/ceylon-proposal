@@ -22,7 +22,7 @@
 }
 .logo_searchs figure{
     height: 5rem;
-    width: 100%;
+    width: 80%;
     background-image: url(../../../public/new\ logo\ 20.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -107,6 +107,7 @@
     color: var(--red-tomato);
     font-family: var(--Roboto);
     font-size: 0.9rem;
+    text-transform: capitalize;
 }
 .footer_rights svg{
     height: 1.5rem;

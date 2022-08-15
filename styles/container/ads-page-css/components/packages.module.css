@@ -27,12 +27,20 @@
     line-height: 2.7rem;
 }
 
+.packages header h2::first-letter {
+    text-transform: capitalize;
+}
+
 .packages header h4 {
     font-family: var(--poppins);
     font-weight: 500;
     font-size: 0.9rem;
     color: var(--black-blue);
     letter-spacing: 0.01rem;
+}
+
+.packages header h4::first-letter {
+    text-transform: capitalize;
 }
 
 .packages main {
@@ -78,6 +86,10 @@
     color: var(--light-grey);
     font-family: var(--Roboto);
     padding-top: 0.5rem;
+}
+
+.blue_card aside::first-letter {
+    text-transform: capitalize;
 }
 
 .blue_card figure {

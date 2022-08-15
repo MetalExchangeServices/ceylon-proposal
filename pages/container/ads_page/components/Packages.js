@@ -8,18 +8,16 @@ export default function Packages() {
         <>
         <section className={styles.packages}>
             <header>
-        <h2>Ready to verify your profile?</h2>
-        <h4>Choose The Package That You Want</h4>
+        <h2>ready to verify your profile?</h2>
+        <h4>choose the package that you want</h4>
             </header>
             <main>
                 <div className={styles.blue_card}>
                     <h4>Save More</h4>
                     <h5>With Goodplans</h5>
-                    <aside>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla</aside>
+                    <aside>make sure to choose the package that you want and if you choose wrong one and pay it when we are unable to reverse</aside>
                     <figure><FontAwesomeIcon icon={faArrowRightLong}></FontAwesomeIcon></figure>
                 </div>
-                <Package/>
-                <Package/>
                 <Package/>
             </main>
         </section>

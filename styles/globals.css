@@ -34,6 +34,12 @@ body {
     height: 100%;
     width: 100%;
 }
+#unavailable svg:first-of-type{
+    display: none;
+}
+#unavailable svg:last-of-type{
+    display: initial;
+}
 
 @media screen and (min-width: 900px) {
     html {

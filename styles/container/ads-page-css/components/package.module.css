@@ -22,6 +22,7 @@
     font-size: 0.8rem;
     font-family: var(--Roboto);
     font-weight: 600;
+    text-transform: capitalize;
 }
 .price_section h3{
     color: var(--black-blue);
@@ -35,12 +36,16 @@
     font-size: 0.7rem;
     padding-bottom: 0.4rem;
     font-weight: 600;
+    text-transform: capitalize;
 }
 .price_section aside{
     font-size: 0.7rem;
     font-family: var(--Roboto);
     font-weight: 500;
     color: var(--grey);
+}
+.price_section aside::first-letter{
+    text-transform: uppercase;
 }
 .features{
     width: 100%;
@@ -60,6 +65,9 @@
     font-family: var(--Roboto);
     font-weight: 400;
     color: var(--grey);
+}
+.features span p::first-letter{
+    text-transform: uppercase;
 }
 .features span svg{
     font-size: 0.9rem;
@@ -85,6 +93,7 @@
     margin-top: 1rem;
     cursor: pointer;
 }
+
 
 /* effect */
 .Package button:hover{
