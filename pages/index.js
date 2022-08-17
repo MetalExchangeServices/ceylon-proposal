@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/container/index.module.css'
 import Link from 'next/link'
-import { useEffect } from 'react'
 
 // containers
 import Ads from './container/ads_page/Ads'

@@ -75,6 +75,9 @@
     cursor: pointer;
     width: 100%;
 }
+.FandQ span h5::first-line{
+    text-transform: uppercase;
+}
 .FandQ span svg{
     font-size: 1rem;
     color: var(--red-tomato);
@@ -92,6 +95,9 @@
     font-family: var(--poppins);
     letter-spacing: 0.01rem;
     display: none;
+}
+.FandQ aside::first-letter{
+    text-transform: uppercase;
 }
 #FandQ_open{
     border-radius: 0rem;

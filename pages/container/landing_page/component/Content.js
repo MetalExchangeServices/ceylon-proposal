@@ -1,16 +1,13 @@
 import styles from '../../../../styles/container/landing-page-css/components/content.module.css'
 import Link from 'next/link'
-import Content_api from '../../Content_api'
 
 export default function Content() {
-    const content = Content_api.Website_info
-
     return (
         <>
             <main className={styles.content}>
                 <section>
-                    <h1>{content.website_first_name}<p>{content.website_second_name}</p></h1>
-                    <h2>{content.website_discription}</h2>
+                    <h1>kiwi<p>singles</p></h1>
+                    <h2>in this website their are lot of proposal of your type and try to find best proposal of your type and also publish your adds to get more offers for your future patner and we can give your future patner here</h2>
                     <div>
                         <Link href={'/container/home_page/Home'}><button>Random Proposals</button></Link>
                         <span></span>

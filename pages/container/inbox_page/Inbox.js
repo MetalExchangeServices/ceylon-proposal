@@ -4,8 +4,11 @@ import Navbar from '../components/Navbar'
 import Filter from '../components/Filter'
 import Friends from './component/Friends'
 import Chats from './component/Chats'
+import { useState } from 'react'
 
 export default function Inbox() {
+  const [Chat, setChat] = useState('')
+
   return (
     <>
       <Head>
@@ -20,8 +23,8 @@ export default function Inbox() {
         <Navbar/>
         <Filter/>
         <div className={styles.inbox}>
-          <Friends/>
-          <Chats/>
+          <Friends setChat={setChat}/>
+          <Chats Chat={Chat}/>
         </div>
       </section>
     </>

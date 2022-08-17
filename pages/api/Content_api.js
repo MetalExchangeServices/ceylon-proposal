@@ -1,4 +1,4 @@
-// export default Content_api = {
+export default Content_api = {
 //     Website_info: {
 //         website_full_name: 'kiwi singles',
 //         website_first_name: 'Kiwi',
@@ -109,4 +109,4 @@
 //             }
 //         ]
 //     }
-// }
+}

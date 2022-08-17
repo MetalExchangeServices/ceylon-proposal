@@ -88,14 +88,14 @@
 
 .basic_info p{
     color: var(--grey);
-    font-family: var(--inter);
+    font-family: var(--poppins);
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.01rem;
 }
 .basic_info h3{
     color: var(--dark-blue);
-    font-family: var(--poppins);
+    font-family: var(--inter);
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -118,7 +118,7 @@
     border: none;
     outline: none;
     font-size: 0.7rem;
-    font-family: var(--inter);
+    font-family: var(--Roboto);
     color: var(--white);
     padding: 0.4rem 1rem;
     border-radius: 1rem;

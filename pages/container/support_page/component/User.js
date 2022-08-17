@@ -2,6 +2,59 @@ import Styles from '../../../../styles/container/support-page-css/components/rep
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faCircleXmark, faUpload } from '@fortawesome/free-solid-svg-icons';
+const report = [{
+    id: 'report1',
+    hadding: 'False information',
+    problems: [{
+        id: 'lable1',
+        problem: 'proposal information is false'
+    }, {
+        id: 'lable2',
+        problem: 'fake video'
+    }, {
+        id: 'lable3',
+        problem: 'profile image is fake'
+    }]
+}, {
+    id: 'report2',
+    hadding: 'threatening',
+    problems: [{
+        id: 'lable1',
+        problem: 'Physical threatening'
+    }, {
+        id: 'lable2',
+        problem: 'messages threatening'
+    }, {
+        id: 'lable3',
+        problem: 'use different account to threatening'
+    }]
+}, {
+    id: 'report3',
+    hadding: 'Disturbing you',
+    problems: [{
+        id: 'lable1',
+        problem: 'Spaming'
+    }, {
+        id: 'lable2',
+        problem: 'fake report on you'
+    }]
+}, {
+    id: 'report4',
+    hadding: 'Prank and other lies',
+    problems: [{
+        id: 'lable1',
+        problem: 'fake identity'
+    }, {
+        id: 'lable2',
+        problem: 'prank you'
+    }, {
+        id: 'lable3',
+        problem: 'use other element'
+    }, {
+        id: 'lable4',
+        problem: 'false information'
+    }]
+}]
 
 export default function User() {
     const FandQ_open = (e) => {
@@ -23,198 +76,27 @@ export default function User() {
                     </span>
                 </div>
                 <div className={Styles.FandQs}>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report1-lable1'>
-                            <input type={'radio'} name='report' id='report1-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report1-lable2'>
-                            <input type={'radio'} name='report' id='report1-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report1-lable3'>
-                            <input type={'radio'} name='report' id='report1-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report1-lable4'>
-                            <input type={'radio'} name='report' id='report1-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report2-lable1'>
-                            <input type={'radio'} name='report' id='report2-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report2-lable2'>
-                            <input type={'radio'} name='report' id='report2-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report2-lable3'>
-                            <input type={'radio'} name='report' id='report2-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report2-lable4'>
-                            <input type={'radio'} name='report' id='report2-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report2-lable1'>
-                            <input type={'radio'} name='report' id='report2-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report2-lable2'>
-                            <input type={'radio'} name='report' id='report2-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report2-lable3'>
-                            <input type={'radio'} name='report' id='report2-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report2-lable4'>
-                            <input type={'radio'} name='report' id='report2-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report3-lable1'>
-                            <input type={'radio'} name='report' id='report3-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report3-lable2'>
-                            <input type={'radio'} name='report' id='report3-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report3-lable3'>
-                            <input type={'radio'} name='report' id='report3-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report3-lable4'>
-                            <input type={'radio'} name='report' id='report3-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report4-lable1'>
-                            <input type={'radio'} name='report' id='report4-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report4-lable2'>
-                            <input type={'radio'} name='report' id='report4-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report4-lable3'>
-                            <input type={'radio'} name='report' id='report4-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report4-lable4'>
-                            <input type={'radio'} name='report' id='report4-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report5-lable1'>
-                            <input type={'radio'} name='report' id='report5-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report5-lable2'>
-                            <input type={'radio'} name='report' id='report5-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report5-lable3'>
-                            <input type={'radio'} name='report' id='report5-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report5-lable4'>
-                            <input type={'radio'} name='report' id='report5-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report6-lable1'>
-                            <input type={'radio'} name='report' id='report6-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report6-lable2'>
-                            <input type={'radio'} name='report' id='report6-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report6-lable3'>
-                            <input type={'radio'} name='report' id='report6-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report6-lable4'>
-                            <input type={'radio'} name='report' id='report6-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <label htmlFor='report7-lable1'>
-                            <input type={'radio'} name='report' id='report7-lable1' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report7-lable2'>
-                            <input type={'radio'} name='report' id='report7-lable2' />
-                            <aside>Lorem Ipsum is simply dummy text</aside>
-                        </label>
-                        <label htmlFor='report7-lable3'>
-                            <input type={'radio'} name='report' id='report7-lable3' />
-                            <aside>Lorem Ipsum is simply</aside>
-                        </label>
-                        <label htmlFor='report7-lable4'>
-                            <input type={'radio'} name='report' id='report7-lable4' />
-                            <aside>Lorem Ipsum is simply dummy text of the printing</aside>
-                        </label>
-                        <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
-                    </div>
+                    {report.map((report) => {
+                        return (
+                            <div className={Styles.FandQ} key={report.id}>
+                                <span>
+                                    <h5 onClick={FandQ_open}>{report.hadding}</h5>
+                                    <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
+                                    <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
+                                </span>
+                                {report.problems.map((problem) => {
+                                    return (
+                                        <label htmlFor={report.id + problem.id}>
+                                            <input type={'radio'} name={report.id} id={report.id + problem.id} />
+                                            <aside>{problem.problem}</aside>
+                                        </label>
+                                    )
+                                })}
+                                <button><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon>Send Report</button>
+                            </div>
+                        )
+                    })}
+
                 </div>
             </section>
         </>

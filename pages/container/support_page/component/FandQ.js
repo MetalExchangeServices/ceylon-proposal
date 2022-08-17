@@ -2,6 +2,39 @@ import Styles from '../../../../styles/container/support-page-css/components/fan
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+const FandQs = [
+    {
+        question: 'How to signin in website',
+        answer: 'there is a setting button in navbar so click it a pop pop open there is signin button so click it and you wil rediect to login page'
+    }, {
+        question: 'How to change language in website',
+        answer: 'we provide our user there languages english , tumil amd sinhala and you can change through setting buton'
+    }, {
+        question: 'How to make my proposal',
+        answer: 'first step is signin the website and second step is make your profile'
+    }, {
+        question: 'How to make our profile is your website',
+        answer: 'there is a button in navbar of profile so click it and give the real detail it is nesasery'
+    }, {
+        question: 'Can service team can take action against the false information proposal',
+        answer: 'if we know this proposal give fake information so your team take action and hide his proposal forever'
+    }, {
+        question: 'How to signin in website',
+        answer: 'there is a setting button in navbar so click it a pop pop open there is signin button so click it and you wil rediect to login page'
+    }, {
+        question: 'How to change language in website',
+        answer: 'we provide our user there languages english , tumil amd sinhala and you can change through setting buton'
+    }, {
+        question: 'How to make my proposal',
+        answer: 'first step is signin the website and second step is make your profile'
+    }, {
+        question: 'How to make our profile is your website',
+        answer: 'there is a button in navbar of profile so click it and give the real detail it is nesasery'
+    }, {
+        question: 'Can service team can take action against the false information proposal',
+        answer: 'if we know this proposal give fake information so your team take action and hide his proposal forever'
+    }
+]
 
 export default function FandQ() {
     const FandQ_open = (e) => {
@@ -23,86 +56,18 @@ export default function FandQ() {
                     </span>
                 </div>
                 <div className={Styles.FandQs}>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
-                    <div className={Styles.FandQ}>
-                        <span>
-                            <h5 onClick={FandQ_open}>Lorem Ipsum is simply dummy text of the printing?</h5>
-                            <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </span>
-                        <aside>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</aside>
-                    </div>
+                    {FandQs.map((FandQ) => {
+                        return (
+                            <div className={Styles.FandQ}>
+                                <span>
+                                    <h5 onClick={FandQ_open} id={Styles.question}>{FandQ.question}</h5>
+                                    <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
+                                    <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
+                                </span>
+                                <aside>{FandQ.answer}</aside>
+                            </div>
+                        )
+                    })}
                 </div>
             </section>
         </>
