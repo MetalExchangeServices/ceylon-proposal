@@ -7,7 +7,7 @@ const inbox = {
     name: 'faisal qurashi',
     profile_src: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80',
     chats: [{
-        states: 'friend',
+        states: 'friends',
         user: 'faraz',
         profile_src: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1530&q=80',
         last_online: 'online',
@@ -49,7 +49,7 @@ const inbox = {
             message: 'idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects,'
         },]
     }, {
-        states: 'invite',
+        states: 'invites',
         user: 'talha',
         profile_src: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80',
         last_online: '8 minutes ago',
@@ -167,7 +167,7 @@ const inbox = {
             message: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects,'
         },]
     }, {
-        states: 'friend',
+        states: 'block',
         user: 'ayout katbar',
         profile_src: 'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
         last_online: '18 days ago',
@@ -205,7 +205,7 @@ const inbox = {
             message: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects,'
         },]
     }, {
-        states: 'friend',
+        states: 'friends',
         user: 'imran ahmed',
         profile_src: 'https://images.unsplash.com/photo-1583864697784-a0efc8379f70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
         last_online: '18 days ago',
@@ -247,8 +247,9 @@ const inbox = {
 
 export default function Friends(setChat) {
     const [Filter_slider, setFilter_slider] = useState('0%')
-    const [User, setUser] = useState('Friends')
+    const [User, setUser] = useState('all')
     const [Slider, setSlider] = useState()
+    const [Friends, setFriend] = useState(inbox.chats)
     useEffect(() => {
         document.getElementById('Back_Btn').addEventListener('click', function () {
             setSlider()
@@ -257,15 +258,40 @@ export default function Friends(setChat) {
 
     const filter = (e) => {
         if (e.target.checked == true) {
-            setFilter_slider('104%')
+            setFilter_slider('90%')
         } else {
             setFilter_slider('0%')
         }
     }
     const Filter_user = (e) => {
-        setUser(e.target.innerText)
-        setFilter_slider('0%')
-        document.getElementById('filter_inbox').checked = false;
+        if (e.target.innerText) {
+            filter = e.target.innerText.toLowerCase()
+            setFilter_slider('0%')
+            document.getElementById('filter_inbox').checked = false;
+            var filter_friend = inbox.chats.filter((e) => {
+                return e.states.includes(filter)
+            })
+            if (filter == 'all') {
+                setFriend(inbox.chats)
+            } else {
+                setFriend(filter_friend)
+            }
+            setUser(filter)
+        }
+    }
+    const search = (e) => {
+        let input = e.target.value.toLowerCase()
+        var search = inbox.chats.filter((e) => {
+            return e.user.includes(input)
+        })
+        if (search.length == 0) {
+            setUser('result not found')
+        } else if (search.length == inbox.chats.length) {
+            setUser('all')
+        } else {
+            setUser('result')
+        }
+        setFriend(search)
     }
 
     return (
@@ -273,7 +299,7 @@ export default function Friends(setChat) {
             <section className={styles.main} id={Slider}>
                 <div className={styles.header}>
                     <span>
-                        <input placeholder='Search' />
+                        <input placeholder='Search' onChange={search} />
                         <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
                     </span>
                     <label htmlFor='filter_inbox'>
@@ -284,17 +310,17 @@ export default function Friends(setChat) {
                 <div className={styles.friends_section}>
                     <div className={styles.friends}>
                         <h4>{User}</h4>
-                        {inbox.chats.map((chat) => {
+                        {Friends.map((chat) => {
                             const last_message = chat.messages;
                             const slider = (e) => {
                                 setSlider(styles.slider_on)
                                 setChat.setChat(chat)
                             }
-                            useEffect(() => {
-                                if (last_message[last_message.length - 1].name == inbox.name) {
-                                    document.getElementById(chat.user).style.display = 'initial';
-                                };
-                            })
+                            // if (typeof window !== "undefined") {
+                            //     if (last_message[last_message.length - 1].name == inbox.name) {
+                            //         document.getElementById(chat.user).style.display = 'initial';
+                            //     };
+                            // }
                             return (
                                 <div className={styles.friend} onClick={slider} key={chat.user}>
                                     <figure style={{ background: 'url(' + chat.profile_src + ')' }}></figure>
@@ -303,7 +329,7 @@ export default function Friends(setChat) {
                                             <h5>{chat.user}</h5>
                                             <p>{chat.last_online}</p>
                                         </span>
-                                        <aside><p id={chat.user}>Me:</p><p>{last_message[last_message.length - 1].message}</p></aside>
+                                        <aside><p id={last_message[last_message.length - 1].name}>Me:</p><p>{last_message[last_message.length - 1].message}</p></aside>
                                     </div>
                                 </div>
                             )
@@ -312,12 +338,13 @@ export default function Friends(setChat) {
                     <div className={styles.inbox_filter} style={{ bottom: Filter_slider }}>
                         <h5>Inbox Filter</h5>
                         <span>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserGroup}></FontAwesomeIcon>Friends</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserPlus}></FontAwesomeIcon>Invites</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserClock}></FontAwesomeIcon>Requests</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faEnvelopeOpen}></FontAwesomeIcon>UnRead</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faFileZipper}></FontAwesomeIcon>Achieve</p>
-                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserSlash}></FontAwesomeIcon>Block</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserGroup}></FontAwesomeIcon>all</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserGroup}></FontAwesomeIcon>friends</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserPlus}></FontAwesomeIcon>invites</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserClock}></FontAwesomeIcon>requests</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faEnvelopeOpen}></FontAwesomeIcon>unRead</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faFileZipper}></FontAwesomeIcon>achieve</p>
+                            <p onClick={Filter_user}><FontAwesomeIcon icon={faUserSlash}></FontAwesomeIcon>block</p>
                         </span>
                     </div>
                 </div>

@@ -52,6 +52,10 @@
     font-weight: 500;
     font-family: var(--Roboto);
     color: var(--black-blue);
+    display: block;
+}
+.main_header div span h5::first-letter{
+    text-transform: uppercase;
 }
 
 .main_header div span aside {
@@ -60,6 +64,7 @@
     font-family: var(--poppins);
     color: var(--red-tomato);
     gap: 0.5rem;
+    text-transform: capitalize;
 }
 
 .main_header div span aside p {
@@ -104,12 +109,18 @@
 .chats div figure {
     background: url(https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80);
     width: 2.3rem;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     height: 2.3rem;
     border-radius: 3rem;
     border: 0.1rem solid var(--grey);
+}
+.chats div figure[id='faisal qurashi'] {
+    background: url(https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 
 .chats div span {
@@ -127,6 +138,7 @@
     color: var(--black-blue);
     gap: 1rem;
     align-items: center;
+    text-transform: capitalize;
 }
 
 .chats div span h5 p {
@@ -142,6 +154,10 @@
     font-family: var(--poppins);
     color: var(--grey);
     gap: 0.5rem;
+    display: block;
+}
+.chats div span aside::first-letter{
+    text-transform: uppercase;
 }
 
 .inputs {
@@ -172,6 +188,37 @@
 .inputs svg:last-child {
     color: var(--light-blue);
 }
+.no_chat_select{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.no_chat_select figure{
+    background: url(../../../../public/message_img.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10rem;
+    height: 10rem;
+}
+.no_chat_select h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--Roboto);
+    color: var(--black-blue);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.no_chat_select p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color: var(--grey);
+    text-align: center;
+}
 
 /* effects */
 .main_header svg:hover {
@@ -186,6 +233,9 @@
 
     .main_header svg {
         display: initial;
+    }
+    .no_chat_select{
+        display: none;
     }
 }
 
@@ -210,6 +260,9 @@
     .inputs svg:first-child{
         display: none;
     }
+    .no_chat_select{
+        display: none;
+    }
 }
 
 @media screen and (min-height: 1350px) {
@@ -219,5 +272,8 @@
 
     .main_header svg {
         display: initial;
+    }
+    .no_chat_select{
+        display: none;
     }
 }

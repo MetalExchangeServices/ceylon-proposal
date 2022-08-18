@@ -92,6 +92,7 @@
 
     .content div {
         flex-direction: column;
+        width: max-content;
     }
 
     .content div span {

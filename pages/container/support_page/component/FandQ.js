@@ -58,7 +58,7 @@ export default function FandQ() {
                 <div className={Styles.FandQs}>
                     {FandQs.map((FandQ) => {
                         return (
-                            <div className={Styles.FandQ}>
+                            <div className={Styles.FandQ} key={FandQ.question}>
                                 <span>
                                     <h5 onClick={FandQ_open} id={Styles.question}>{FandQ.question}</h5>
                                     <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>

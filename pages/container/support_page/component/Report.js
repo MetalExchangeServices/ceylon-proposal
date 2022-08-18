@@ -99,7 +99,7 @@ export default function Report() {
                                 </span>
                                 {report.problems.map((problem) => {
                                     return (
-                                        <label htmlFor={report.id + problem.id}>
+                                        <label htmlFor={report.id + problem.id} key={report.id}>
                                             <input type={'radio'} name={report.id} id={report.id + problem.id} />
                                             <aside>{problem.problem}</aside>
                                         </label>
