@@ -20,7 +20,8 @@
     padding: var(--margin);
     padding-bottom: 2rem;
 }
-.benefit h2::first-letter{
+
+.benefit h2::first-letter {
     text-transform: capitalize;
 }
 
@@ -97,6 +98,11 @@
     .verify figure {
         order: 0;
     }
+
+    .benefit div span aside,.benefit div span h3 {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media screen and (min-height: 1350px) {
@@ -107,5 +113,10 @@
 
     .verify figure {
         order: 0;
+    }
+
+    .benefit div span aside,.benefit div span h3 {
+        width: 100%;
+        text-align: center;
     }
 }

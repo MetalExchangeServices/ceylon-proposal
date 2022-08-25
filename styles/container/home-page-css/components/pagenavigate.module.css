@@ -5,7 +5,7 @@
     align-items: center;
     padding: 4rem 0rem;
 }
-.Pagenavigate p{
+.Pagenavigate p, .Pagenavigate span{
     width: 2rem;
     height: 2rem;
     font-size: 0.9rem;
@@ -20,12 +20,23 @@
     font-weight: 500;
     cursor: pointer;
 }
+.Pagenavigate p{
+    display: none;
+}
+.Pagenavigate p:nth-of-type(1){
+    background: var(--light-blue);
+    color: var(--white);
+    display: flex;
+}
+.Pagenavigate p:nth-of-type(2){
+    display: flex;
+}
+.Pagenavigate p:nth-of-type(3){
+    display: flex;
+}
 .Pagenavigate svg{
     color: var(--light-blue);
     font-size: 1.5rem;
     margin: 0rem 0.5rem;
-}
-.Pagenavigate p:first-child{
-    background: var(--light-blue);
-    color: var(--white);
+    cursor: pointer;
 }

@@ -14,7 +14,7 @@ export default function Edit_Profile() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="description" content="Free Web tutorials" />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="developer" content="Aizazulah" />
@@ -33,8 +33,8 @@ export default function Edit_Profile() {
           <Edit_Person_info/>
           <Edit_Family_info/>
           <div className={styles.parent_profile}>
-            <Edit_Parent_info/>
-            <Edit_Parent_info/>
+            <Edit_Parent_info title={'Father'}/>
+            <Edit_Parent_info title={'Mother'}/>
           </div>
         </div>
         <div className={styles.adds_section}><p>123</p></div>

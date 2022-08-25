@@ -10,10 +10,16 @@ export default function Navbar() {
   const [Navbar, setNavbar] = useState(style.navbar_on);
   const [Language_select, setLanguage_select] = useState('none')
   const [Language_input, setLanguage_input] = useState(faCaretDown)
+  const [Filter_visibilty, setFilter_visibilty] = useState('none')
 
   useEffect(() => {
     window.addEventListener('scroll', navbar)
-  })
+    if (window.history.state.url == '/container/home_page/Home') {
+      setFilter_visibilty('flex')
+    } else {
+      setFilter_visibilty('none')
+    }
+  },[setFilter_visibilty])
 
   const language_f = () => {
     if (LanguageField === '') {
@@ -22,6 +28,7 @@ export default function Navbar() {
       setLanguageField('')
     }
   }
+
   const language = (e) => {
     setLanguage(e.target.innerText)
     setLanguage_select('none')
@@ -108,7 +115,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <label className={style.filter_icon} htmlFor='filter'>
+          <label className={style.filter_icon} htmlFor='filter' style={{display: Filter_visibilty}}>
             <input onChange={Filter_tab} className={style.filter} type={'checkbox'} id='filter'></input>
             <FontAwesomeIcon className={style.filter_icon} icon={faArrowDownWideShort}></FontAwesomeIcon>
           </label>

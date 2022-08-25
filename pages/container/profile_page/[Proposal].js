@@ -1,13 +1,15 @@
 import Head from 'next/head'
-import styles from '../../../styles/container/home-page-css/home.module.css'
+import styles from '../../../styles/container/profile-page-css/profile.module.css'
 import Navbar from '../components/Navbar'
 import Filter from '../components/Filter'
 import Footer from '../components/Footer'
-import Proposal from './components/Proposal'
-import Pagenavigate from './components/Pagenavigate'
-import { useState, createContext, useEffect } from 'react'
-const Filter_api = createContext()
-const Page_navigation = createContext()
+import Basic_Proposal from './component/Basic_porposal'
+import Profile_media from './component/Profile_media'
+import Person_info from './component/Person_info'
+import Parent_info from './component/Parent_info'
+import Family_info from './component/Family_info'
+import Bio_profile from './component/Bio_profile'
+import { useRouter } from 'next/router'
 const proposal_api = [
   {
     basic_profile: {
@@ -312,73 +314,12 @@ const proposal_api = [
   },
 ]
 
-export default function Home() {
-  const [Search, setSearch] = useState('');
-  const [Currentpage, setCurrentpage] = useState(1);
-  const [Quentity, setQuentity] = useState(10);
-  const [Gender, setGender] = useState('')
-  const [Max_age, setMax_age] = useState(99)
-  const [Min_age, setMin_age] = useState(15)
-  const [Religion, setReligion] = useState('')
-  const [Country, setCountry] = useState('')
-  const [Profession, setProfession] = useState('')
-  const [Sorting, setSorting] = useState('')
-  const [Result_not_found, setResult_not_found] = useState('none')
-  let pages = [];
-  let religion = [];
-  let country = [];
-  let profession = [];
-  const sorting = ['neweest', 'oldest', 'verifyed']
-
-  if (Min_age > Max_age) {
-    alert('Min age can not be grether than Max age other wise age will be defualt ')
-    setMax_age(99)
-    setMin_age(15)
-  }
-
-  const search = proposal_api.filter((e) => {
-    return e.basic_profile.proposal_visibilty == 'show'
+export default function Proposal() {
+  const router = useRouter()
+  const porposal_name = router.query.Proposal?.replace('Proposal_', '');
+  const proposal = proposal_api.filter((e) => {
+    return e.basic_profile.name.toLowerCase() == porposal_name?.toLowerCase()
   })
-  const filter_search = search.filter((e) => {
-    return e.basic_profile.name.includes(Search) &&
-      e.basic_profile.gender.includes(Gender) &&
-      e.basic_profile.religion.toLowerCase().includes(Religion) &&
-      e.basic_profile.country.toLowerCase().includes(Country) &&
-      e.basic_profile.profession.toLowerCase().includes(Profession) &&
-      e.basic_profile.age > Min_age &&
-      e.basic_profile.age < Max_age
-  })
-
-  useEffect(() => {
-    if (filter_search.length == 0) {
-      setResult_not_found('flex')
-    } else {
-      setResult_not_found('none')
-    }
-  }, [filter_search])
-
-  search.map((e) => {
-    religion.push(e.basic_profile.religion.toLowerCase())
-  });
-
-  search.map((e) => {
-    country.push(e.basic_profile.country.toLowerCase())
-  });
-
-  search.map((e) => {
-    profession.push(e.basic_profile.profession.toLowerCase())
-  });
-
-
-  const proposal_in_page = Currentpage * Quentity;
-  const proposals = proposal_in_page - Quentity;
-  const proposal = filter_search.slice(proposals, proposal_in_page)
-  for (let i = 1; i <= Math.ceil(search.length / Quentity); i++) {
-    pages.push(i);
-  }
-
-
-
   return (
     <>
       <Head>
@@ -387,39 +328,27 @@ export default function Home() {
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="developer" content="Aizazulah" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ceylon Proposals | Home</title>
+        <title>Ceylon Proposals | Profile</title>
       </Head>
       <Navbar />
-      <Filter_api.Provider value={[
-        { set: setReligion, api: religion, title: 'religion' },
-        { set: setCountry, api: country, title: 'country' },
-        { set: setProfession, api: profession, title: 'profession' },
-        { set: setSorting, api: sorting, title: 'sorting' }
-      ]}>
-        <Filter setGender={setGender} setMax_age={setMax_age} setMin_age={setMin_age} />
-      </Filter_api.Provider>
-      <main className={styles.home_main}>
-        <div className={styles.porposals_section}>
-          {proposal.map((api) => {
-            return (
-              <Proposal key={api.basic_profile.proposal_id} image={api.proposal_media.image} about={api.about} basic_profile={api.basic_profile} />
-            )
-          })}
-          <div className={styles.result_not_found} style={{ display: Result_not_found }}>
-            <figure></figure>
-            <h5>Result Not Found!</h5>
+      <Filter />
+      <main className={styles.profile}>
+        <div className={styles.basic_profile}>
+          <Basic_Proposal basic_profile={proposal[0]?.basic_profile}/>
+          <Bio_profile about={proposal[0]?.about}/>
+        </div>
+        <div className={styles.detailed_profile}>
+          <Profile_media proposal_media={proposal[0]?.proposal_media}/>
+          <Person_info person_info={proposal[0]?.person_info}/>
+          <Family_info family_info={proposal[0]?.family_info}/>
+          <div className={styles.parent_profile}>
+            <Parent_info title={'father'} Parent_info={proposal_api[0]?.father_info}/>
+            <Parent_info title={'mother'} Parent_info={proposal_api[0]?.mother_info}/>
           </div>
         </div>
-        <div className={styles.advertisement_section}>
-        </div>
+        <div className={styles.adds_section}></div>
       </main>
-      <div className={styles.page_moving}>
-        <Page_navigation.Provider value={{pages, setCurrentpage}}>
-          <Pagenavigate pages={pages} setCurrentpage={setCurrentpage} />
-        </Page_navigation.Provider>
-      </div>
-      <Footer setSearch={setSearch} />
+      <Footer />
     </>
   )
-};
-export { Filter_api, Page_navigation };
+}

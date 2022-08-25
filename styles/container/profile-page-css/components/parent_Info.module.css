@@ -29,6 +29,7 @@
     font-weight: 600;
     letter-spacing: 0.01rem;
     color: var(--black-blue);
+    text-transform: capitalize;
 }
 .Parent_info div{
     display: flex;
@@ -50,10 +51,16 @@
     color: var(--grey);
     font-size: 0.8rem;
     font-weight: 400;
+    text-transform: capitalize;
 }
 .Parent_info div span p:nth-of-type(1){
     color: var(--black-blue);
     font-weight: 500;
+}
+.only_num::-webkit-outer-spin-button,
+.only_num::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* media query */

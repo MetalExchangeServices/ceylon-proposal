@@ -2,6 +2,8 @@ import styles from '../../../../styles/container/profile-page-css/components/bas
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightFromBracket, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+var invalidChars = ["-", "+", "e", "."];
+var invalidChar = ["-", "+", "e"];
 
 export default function Edit_Basic_Profile() {
     return (
@@ -15,9 +17,9 @@ export default function Edit_Basic_Profile() {
                 <section className={styles.basic_image}>
                     <figure>
                         <div>
-                            <input id='profile_photo_edit'/>
+                            <input id='profile_photo_edit' type={'file'} accept='png, jpg' />
                             <label htmlFor='profile_photo_edit'>
-                            <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
                             </label>
                         </div>
                     </figure>
@@ -25,34 +27,42 @@ export default function Edit_Basic_Profile() {
                 <section className={styles.basic_info}>
                     <span>
                         <p>Name</p>
-                        <input/>
+                        <input placeholder='Enter Name' />
                     </span>
                     <span>
                         <p>Country</p>
-                        <input/>
+                        <input placeholder='Enter Country' />
                     </span>
                     <span>
                         <p>Age</p>
-                        <input/>
+                        <input placeholder='Enter Age' type={'number'} className={styles.only_num} onKeyDown={(e) => {
+                            if (invalidChars.includes(e.key)) {
+                                e.preventDefault();
+                            }
+                        }} />
                     </span>
                     <span>
                         <p>Height</p>
-                        <input/>
+                        <input placeholder='Enter Height' type={'number'} className={styles.only_num} onKeyDown={(e) => {
+                            if (invalidChar.includes(e.key)) {
+                                e.preventDefault();
+                            }
+                        }} />
                     </span>
                     <span>
                         <p>Religion</p>
-                        <input/>
+                        <input placeholder='Enter Religion' />
                     </span>
                     <span>
                         <p>Civil Status</p>
-                        <input/>
+                        <input placeholder='Single or Merried' />
                     </span>
                     <span>
                         <p>Profession</p>
-                        <input/>
+                        <input placeholder='Enter Profession' />
                     </span>
                 </section>
-             </main>
+            </main>
         </>
     )
 }

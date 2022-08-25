@@ -71,7 +71,7 @@ export default function User() {
                 <div className={Styles.hadding}>
                     <h3>Help Center For Our Customer</h3>
                     <span>
-                        <Link href={'/container/support_page/Support'}><p>(F&Qs)</p></Link>
+                        {/* <Link href={'/container/support_page/Support'}><p>(F&Qs)</p></Link> */}
                         <Link href={'/container/support_page/Problem'}><p>(Reports)</p></Link>
                     </span>
                 </div>

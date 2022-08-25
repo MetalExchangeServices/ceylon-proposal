@@ -14,18 +14,21 @@
 .filter_main {
     height: 100%;
     background: var(--light-grey);
-    padding: 5rem 0.5rem 0.5rem 0.5rem;
+    padding: 4rem 0.5rem 0.5rem 0.5rem;
 }
-#filter_off{
+
+#filter_off {
     left: -100vw !important;
 }
+
 .filter_container {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     overflow-y: scroll;
-    height: 21rem
+    height: 24.5rem;
+    padding-top: 1rem;
 }
 
 .changes_btn {
@@ -41,6 +44,7 @@
     color: var(--white);
     box-shadow: 0rem 0rem 1rem 0rem rgb(0 0 0 / 12%);
     margin-top: 0.5rem;
+    display: none;
 }
 
 .gender_tab {
@@ -54,6 +58,7 @@
     letter-spacing: 0.02rem;
     font-family: var(--Roboto);
     width: 100%;
+    text-transform: capitalize;
 }
 
 .gender_tab span {
@@ -72,11 +77,14 @@
     font-family: var(--Roboto);
     color: var(--grey);
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .gender_tab input {
     outline: none;
     cursor: pointer;
+    width: 0.7rem;
+    height: 0.7rem;
 }
 
 .age_tab span {
@@ -102,6 +110,16 @@
     color: var(--black-blue);
 }
 
+.age_tab input::-webkit-outer-spin-button,
+.age_tab input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.age_tab input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .religion_tab {
     display: flex;
     flex-direction: column;
@@ -121,26 +139,33 @@
     outline: none;
 }
 
+.religion_tab input::placeholder {
+    text-transform: capitalize;
+}
+
 .religion_tab span p {
     font-weight: 400;
     line-height: 1rem;
     padding: 0.2rem;
     color: var(--grey);
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .options {
-    display: none;
-    height: 6.5rem;
-    border: 0.2rem solid var(--dark-blue);
-    padding: 0.2rem;
+    height: 0rem;
+    border: none;
+    padding: 0rem 0.2rem;
     transition-duration: 0.5s;
     overflow-y: scroll;
     margin: 0rem 0.5rem;
     border-radius: 0.2rem;
     font-family: var(--Roboto);
     font-size: 0.8rem;
+    background: var(--white);
+    transition-delay: 0.3s;
 }
+
 .a_container {
     display: none;
     justify-content: flex-start;
@@ -168,10 +193,18 @@
 .changes_btn:hover {
     background: var(--dark-blue);
 }
+
 .a_container p:hover {
     color: var(--red-tomato);
     font-weight: 600;
 }
+
+.religion_tab input:focus+.options {
+    height: 9rem;
+    border: 0.2rem solid var(--dark-blue);
+    padding: 0.2rem 0.2rem;
+}
+
 
 @media screen and (max-width: 900px) {
     .filter_body {
@@ -182,23 +215,28 @@
         padding: var(--margin);
         overflow-y: scroll;
     }
-    .filter_main{
+
+    .filter_main {
         width: 100%;
         width: 15rem;
         padding: 5rem 0.5rem 0.5rem 0.5rem;
     }
-    .filter_container{
+
+    .filter_container {
         height: auto;
         gap: 1.5rem;
     }
-    .a_container{
+
+    .a_container {
         display: flex;
     }
-    .changes_btn{
+
+    .changes_btn {
         margin-top: 2rem;
     }
 
 }
+
 @media screen and (min-height: 1350px) {
     .filter_body {
         transition-duration: 0.5s;
@@ -208,19 +246,23 @@
         padding: var(--margin);
         overflow-y: scroll;
     }
-    .filter_main{
+
+    .filter_main {
         width: 100%;
         width: 15rem;
         padding: 5rem 0.5rem 0.5rem 0.5rem;
     }
-    .filter_container{
+
+    .filter_container {
         height: auto;
         gap: 1.5rem;
     }
-    .a_container{
+
+    .a_container {
         display: flex;
     }
-    .changes_btn{
+
+    .changes_btn {
         margin-top: 2rem;
     }
 }

@@ -20,9 +20,9 @@
 .images{
     width: 100%;
     background: url(https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     height: 11rem;
     border-radius: 0.3rem;
     box-shadow: inset 0rem 0rem 0.4rem 0rem hsl(0deg 0% 0% / 50%);
@@ -52,6 +52,9 @@
     background: var(--light-grey);
     margin: 0.15rem;
     cursor: pointer;
+}
+.images div span:first-child{
+    background: var(--light-blue);
 }
 .media{
     width: 100%;
@@ -84,6 +87,12 @@
     font-family: var(--poppins);
     font-weight: 500;
     color: var(--black-blue);
+    text-align: left;
+    display: block;
+    width: 70%;
+}
+.media p::first-letter{
+    text-transform: capitalize;
 }
 .media input{
     outline: none;
@@ -107,6 +116,7 @@
 }
 .media svg{
     font-size: 1.2rem;
+    cursor: pointer;
 }
 .media svg:first-of-type{
     color: var(--light-blue);

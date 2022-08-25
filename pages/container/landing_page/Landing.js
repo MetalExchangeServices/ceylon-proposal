@@ -9,7 +9,7 @@ export default function Landing() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="description" content="Free Web tutorials" />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="developer" content="Aizazulah" />

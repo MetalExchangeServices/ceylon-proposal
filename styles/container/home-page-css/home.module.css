@@ -8,7 +8,7 @@
 
 .porposals_section {
     width: 75%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -25,6 +25,28 @@
 .page_moving {
     width: 100%;
     height: auto;
+}
+.result_not_found{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.result_not_found figure{
+    height: 15rem;
+    width: 15rem;
+    background: url(../../../public/search\ not\ found.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.result_not_found h5{
+    font-size: 2rem;
+    color: var(--black-blue);
+    font-weight: 600;
+    font-family: var(--Roboto);
 }
 
 @media screen and (max-width: 900px) {

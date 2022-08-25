@@ -9,8 +9,9 @@ export default function Edit_Profile_media() {
                 <h4>Media</h4>
                 <figure className={styles.images}>
                     <div className={styles.edits_image}>
+                    <input type={'file'} style={{display: 'none'}} id='edit_image'/>
                     <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
-                    <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
+                    <label htmlFor='edit_image'><FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon></label>
                     </div>
                     <div>
                         <span></span>

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 const Website_social_link = {
   facebook: '/',
   twitter: '/',
@@ -11,7 +12,14 @@ const Website_social_link = {
   snapchat: '/'
 }
 
-export default function Footer() {
+export default function Footer(setSearch) {
+  useEffect(() => {
+    if (history.state.url == '/container/home_page/Home') {
+      setUser('flex')
+    }
+  },[])
+  const [User, setUser] = useState('none')
+
     return (
     <>
     <footer className={style.footer}>
@@ -21,7 +29,7 @@ export default function Footer() {
           <p>in this website their are lot of proposal of your type and try to find best proposal of your type and also publish your adds to get more offers for your future patner and we can give your future patner here</p>
           <div>
           <span><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon><input placeholder='Enter Email' className={style.email}/></span>
-          <span><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon><input placeholder='Search User' className={style.user}/></span>
+          <span style={{display: User}}><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon><input placeholder='Search User' onChange={(e) => {setSearch.setSearch(e.target.value)}} className={style.user}/></span>
           </div>
         </div>
         <div className={style.footer_links}>

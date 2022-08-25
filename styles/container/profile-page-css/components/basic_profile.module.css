@@ -60,10 +60,10 @@
     width: 9rem;
     height: 9rem;
     background: url(https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80);
-    background-position: center center;
+    background-position: center center !important;
     box-shadow: inset 0rem 0rem 0.4rem 0rem hsl(0deg 0% 0% / 50%);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     border-radius: 7rem;
 }
 .basic_image figure div{
@@ -109,6 +109,7 @@
     color: var(--grey);
     font-size: 0.7rem;
     font-weight: 400;
+    text-transform: capitalize;
 }
 .basic_info span input {
     outline: none;
@@ -189,6 +190,11 @@
 }
 .contect svg{
     font-size: 1rem;
+}
+.only_num::-webkit-outer-spin-button,
+.only_num::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 
