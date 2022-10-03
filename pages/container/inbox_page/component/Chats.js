@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faCircleExclamation, faUserLock, faEnvelopeOpenText, faImage, faGift, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import Message from './message'
 
 export default function Chats(Chat) {
     useEffect(() => {
@@ -12,7 +13,7 @@ export default function Chats(Chat) {
             setSelect('flex')
             setNo_chat_select('none')
         }
-    },[Chat.Chat])
+    }, [Chat.Chat])
     const [Select, setSelect] = useState('none')
     const [No_chat_select, setNo_chat_select] = useState('')
     const message = Chat?.Chat?.messages
@@ -34,24 +35,16 @@ export default function Chats(Chat) {
                         <Link href={'/container/support_page/User_problem'}><FontAwesomeIcon icon={faCircleExclamation}></FontAwesomeIcon></Link>
                     </span>
                 </header>
-                <section className={styles.no_chat_select} style={{display: No_chat_select}}>
+                <section className={styles.no_chat_select} style={{ display: No_chat_select }}>
                     <figure></figure>
                     <h5>Select a Conversation</h5>
                     <p>Try selecting a conversation or searching for someone specific.</p>
                 </section>
                 <div style={{ display: Select }} className={styles.chats_main}>
                     <div className={styles.chats}>
-                        {(Array.isArray(message) ? message : []).map((chat_message) => {
-                            let image = Chat.Chat.profile_src
-
+                        {(Array.isArray(message) ? message : []).map((chat_message, index) => {
                             return (
-                                <div key={chat_message.message}>
-                                    <figure style={{ background: 'url('+image+')' }} id={chat_message.name}></figure>
-                                    <span>
-                                        <h5>{chat_message.name}<p>{chat_message.date}</p></h5>
-                                        <aside>{chat_message.message}</aside>
-                                    </span>
-                                </div>
+                                <Message key={index} hadding={chat_message.name} date={chat_message.date} message={chat_message.message}></Message>
                             )
                         })}
                     </div>

@@ -70,7 +70,8 @@ export default function Navbar() {
             <FontAwesomeIcon className={style.menu_icon} icon={faBars}></FontAwesomeIcon>
           </label>
         </div>
-        <figure className={style.nav_logo}></figure>
+        <figure className={style.nav_logo}>
+        </figure>
         <div className={style.a_container}>
           <Link href='/container/home_page/Home'>
             <p>Proposals</p>

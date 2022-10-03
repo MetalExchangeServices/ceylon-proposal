@@ -1,3 +1,4 @@
+import Image from 'next/dist/client/image'
 import styles from '../../../../styles/container/home-page-css/components/porposal.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
@@ -10,23 +11,24 @@ export default function Proposal(prop) {
       setUnverify(styles.unverify)
     }
   },[prop.basic_profile])
-  const [Image, setImage] = useState(prop.image?.image_src1)
+  const [Picture, setPicture] = useState(prop.image?.image_src1)
   const [Unverify, setUnverify] = useState('')
   const Proposal = prop.basic_profile?.name
 
   return (
     <>
       <main className={styles.proposal}>
-        <figure style={{background: 'url('+Image+')'}}>
+        <figure>
             <div className={styles.img_top}>
                 <FontAwesomeIcon className={styles.verify} id={Unverify} icon={faCircleCheck}></FontAwesomeIcon>
                 <p>{prop.basic_profile?.profession}</p>
                 <Link href={'/container/support_page/User_problem'}><FontAwesomeIcon className={styles.report} icon={faExclamationCircle}></FontAwesomeIcon></Link>
             </div>
+            <Image objectFit='cover' layout='responsive' width={'100%'} height={'100%'} src={Picture}></Image>
             <div className={styles.image_changer}>
-                <span onClick={(e) => {setImage(prop.image?.image_src1); e.target.style.background = 'var(--light-blue)'; e.target.nextSibling.style.background = 'var(--grey)'; e.target.nextSibling.nextSibling.style.background = 'var(--grey)'}}></span>
-                <span onClick={(e) => {setImage(prop.image?.image_src2); e.target.style.background = 'var(--light-blue)'; e.target.nextSibling.style.background = 'var(--grey)'; e.target.previousSibling.style.background = 'var(--grey)'}}></span>
-                <span onClick={(e) => {setImage(prop.image?.image_src3); e.target.style.background = 'var(--light-blue)'; e.target.previousSibling.style.background = 'var(--grey)'; e.target.previousSibling.previousSibling.style.background = 'var(--grey)'}}></span>
+                <span onClick={(e) => {setPicture(prop.image?.image_src1); e.target.style.background = 'var(--light-blue)'; e.target.nextSibling.style.background = 'var(--grey)'; e.target.nextSibling.nextSibling.style.background = 'var(--grey)'}}></span>
+                <span onClick={(e) => {setPicture(prop.image?.image_src2); e.target.style.background = 'var(--light-blue)'; e.target.nextSibling.style.background = 'var(--grey)'; e.target.previousSibling.style.background = 'var(--grey)'}}></span>
+                <span onClick={(e) => {setPicture(prop.image?.image_src3); e.target.style.background = 'var(--light-blue)'; e.target.previousSibling.style.background = 'var(--grey)'; e.target.previousSibling.previousSibling.style.background = 'var(--grey)'}}></span>
             </div>
         </figure>
         <div className={styles.basic_info}>

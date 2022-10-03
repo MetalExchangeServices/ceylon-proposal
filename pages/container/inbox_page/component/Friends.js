@@ -2,6 +2,7 @@ import styles from '../../../../styles/container/inbox-page-css/components/frien
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders, faSearch, faUserGroup, faUserPlus, faUserClock, faEnvelopeOpen, faUserSlash, faFileZipper, faBridgeLock, faMessage } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const inbox = {
     name: 'faisal qurashi',
@@ -312,18 +313,15 @@ export default function Friends(setChat) {
                         <h4>{User}</h4>
                         {Friends.map((chat) => {
                             const last_message = chat.messages;
-                            const slider = (e) => {
+                            const slider = () => {
                                 setSlider(styles.slider_on)
                                 setChat.setChat(chat)
                             }
-                            // if (typeof window !== "undefined") {
-                            //     if (last_message[last_message.length - 1].name == inbox.name) {
-                            //         document.getElementById(chat.user).style.display = 'initial';
-                            //     };
-                            // }
                             return (
                                 <div className={styles.friend} onClick={slider} key={chat.user}>
-                                    <figure style={{ background: 'url(' + chat.profile_src + ')' }}></figure>
+                                    <figure style={{ background: 'url(' + chat.profile_src + ')' }}>
+                                        <Image src={chat.profile_src} style={{borderRadius: '1.5rem'}} width={'100%'} height={'100%'} objectFit='cover' layout='responsive'></Image>
+                                    </figure>
                                     <div>
                                         <span>
                                             <h5>{chat.user}</h5>

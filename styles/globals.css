@@ -39,10 +39,13 @@ body {
 #unavailable svg:last-of-type{
     display: initial;
 }
+html {
+    font-size: 20px !important;
+}
 
 @media screen and (min-width: 900px) {
     html {
-        font-size: 3.5vh !important;
+        font-size: 20px !important;
     }
 }
 
